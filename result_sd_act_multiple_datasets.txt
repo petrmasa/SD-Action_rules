@@ -1,0 +1,858 @@
+Automatically reordering numeric categories ...done
+Cleverminer version  1.0.11
+                 filename    target  ... rules_total rules_act
+0              adults.zip    Target  ...        None      None
+1            diabetes.zip   Outcome  ...        None      None
+2  marketing_campaign.zip  Response  ...        None      None
+3            svmtrain.zip  Survived  ...        None      None
+
+[4 rows x 7 columns]
+<class 'float'>
+...will go for dataset adults.zip, target Target, target_class >50K, split_class Hours_per_week_b, ignore_vars nan, i.e. []
+......will go for column Target out of Index(['Income', 'Capital_Gain_b', 'Capital_Loss_b', 'Hours_per_week_b',
+       'Occupation', 'Martial_Status', 'Relationship', 'Age_b', 'Education',
+       'Sex', 'Country', 'Race', 'Workclass', 'Target'],
+      dtype='object')
+['<=50K' '>50K']
+...ante is [{'name': 'Income', 'type': 'subset', 'minlen': 1, 'maxlen': 1}, {'name': 'Capital_Gain_b', 'type': 'subset', 'minlen': 1, 'maxlen': 1}, {'name': 'Capital_Loss_b', 'type': 'subset', 'minlen': 1, 'maxlen': 1}, {'name': 'Occupation', 'type': 'subset', 'minlen': 1, 'maxlen': 1}, {'name': 'Martial_Status', 'type': 'subset', 'minlen': 1, 'maxlen': 1}, {'name': 'Relationship', 'type': 'subset', 'minlen': 1, 'maxlen': 1}, {'name': 'Age_b', 'type': 'subset', 'minlen': 1, 'maxlen': 1}, {'name': 'Education', 'type': 'subset', 'minlen': 1, 'maxlen': 1}, {'name': 'Sex', 'type': 'subset', 'minlen': 1, 'maxlen': 1}, {'name': 'Country', 'type': 'subset', 'minlen': 1, 'maxlen': 1}, {'name': 'Race', 'type': 'subset', 'minlen': 1, 'maxlen': 1}, {'name': 'Workclass', 'type': 'subset', 'minlen': 1, 'maxlen': 1}]
+Cleverminer version 1.0.11.
+Warning: Python 3.10+ NOT detected. You should upgrade to Python 3.10 or greater to get better performance
+Starting data preparation ...
+Automatically reordering numeric categories ...
+Encoding columns into bit-form...
+Encoding columns into bit-form...done
+Data preparation finished.
+Will go for  SD4ftMiner
+Starting to mine rules.
+  0%|                                                    |Elapsed Time: 0:00:00
+  0%|                                                    |Elapsed Time: 0:00:00
+  1%|                                                    |Elapsed Time: 0:00:00
+  2%|#                                                   |Elapsed Time: 0:00:00
+  2%|#                                                   |Elapsed Time: 0:00:00
+  3%|#                                                   |Elapsed Time: 0:00:00
+ 12%|######                                              |Elapsed Time: 0:00:00
+ 13%|#######                                             |Elapsed Time: 0:00:00
+ 14%|#######                                             |Elapsed Time: 0:00:00
+ 15%|#######                                             |Elapsed Time: 0:00:00
+ 16%|########                                            |Elapsed Time: 0:00:00
+ 25%|#############                                       |Elapsed Time: 0:00:01
+ 26%|#############                                       |Elapsed Time: 0:00:01
+ 27%|##############                                      |Elapsed Time: 0:00:01
+ 27%|##############                                      |Elapsed Time: 0:00:01
+ 28%|##############                                      |Elapsed Time: 0:00:01
+ 38%|###################                                 |Elapsed Time: 0:00:01
+ 38%|####################                                |Elapsed Time: 0:00:01
+ 39%|####################                                |Elapsed Time: 0:00:01
+ 40%|####################                                |Elapsed Time: 0:00:01
+ 40%|#####################                               |Elapsed Time: 0:00:01
+ 41%|#####################                               |Elapsed Time: 0:00:01
+ 50%|##########################                          |Elapsed Time: 0:00:02
+ 51%|##########################                          |Elapsed Time: 0:00:02
+ 52%|###########################                         |Elapsed Time: 0:00:02
+ 52%|###########################                         |Elapsed Time: 0:00:02
+ 53%|###########################                         |Elapsed Time: 0:00:02
+ 63%|################################                    |Elapsed Time: 0:00:02
+ 63%|#################################                   |Elapsed Time: 0:00:02
+ 64%|#################################                   |Elapsed Time: 0:00:02
+ 65%|#################################                   |Elapsed Time: 0:00:02
+ 66%|##################################                  |Elapsed Time: 0:00:02
+ 75%|#######################################             |Elapsed Time: 0:00:02
+ 75%|#######################################             |Elapsed Time: 0:00:03
+ 76%|#######################################             |Elapsed Time: 0:00:03
+ 77%|########################################            |Elapsed Time: 0:00:03
+ 78%|########################################            |Elapsed Time: 0:00:03
+ 87%|#############################################       |Elapsed Time: 0:00:03
+ 88%|#############################################       |Elapsed Time: 0:00:03
+ 89%|##############################################      |Elapsed Time: 0:00:03
+ 89%|##############################################      |Elapsed Time: 0:00:03
+ 90%|###############################################     |Elapsed Time: 0:00:03
+100%|####################################################|Elapsed Time: 0:00:03
+100%|####################################################|Elapsed Time: 0:00:03
+Done. Total verifications : 2496, rules 37, times: prep 0.18sec, processing 3.92sec
+
+List of rules:
+RULEID BASE1 BASE2 RatioConf DeltaConf Rule
+     1  2740  4328    1.987    +0.173  Capital_Gain_b(<-1,0>) => Target(>50K) | --- : Hours_per_week_b((40,50>) x Hours_per_week_b((30,40>)
+     2  3164  4934    1.955    +0.185  Capital_Loss_b(<-1,0>) => Target(>50K) | --- : Hours_per_week_b((40,50>) x Hours_per_week_b((30,40>)
+     3  1064  1074    1.515    +0.200  Occupation(Exec-managerial) => Target(>50K) | --- : Hours_per_week_b((40,50>) x Hours_per_week_b((30,40>)
+     4   856  1288    1.360    +0.151  Occupation(Prof-specialty) => Target(>50K) | --- : Hours_per_week_b((40,50>) x Hours_per_week_b((30,40>)
+     5   527   514    1.780    +0.178  Occupation(Sales) => Target(>50K) | --- : Hours_per_week_b((40,50>) x Hours_per_week_b((30,40>)
+     6  2942  4720    1.393    +0.159  Martial_Status(Married-civ-spouse) => Target(>50K) | --- : Hours_per_week_b((40,50>) x Hours_per_week_b((30,40>)
+     7  2753  4050    1.405    +0.162  Relationship(Husband) => Target(>50K) | --- : Hours_per_week_b((40,50>) x Hours_per_week_b((30,40>)
+     8  1211  1527    1.970    +0.205  Age_b((30,40>) => Target(>50K) | --- : Hours_per_week_b((40,50>) x Hours_per_week_b((30,40>)
+     9  1218  1855    1.587    +0.189  Age_b((40,50>) => Target(>50K) | --- : Hours_per_week_b((40,50>) x Hours_per_week_b((30,40>)
+    10   601  1153    1.575    +0.183  Age_b((50,60>) => Target(>50K) | --- : Hours_per_week_b((40,50>) x Hours_per_week_b((30,40>)
+    11   621  1358    1.721    +0.102  Education(HS-grad) => Target(>50K) | --- : Hours_per_week_b((40,50>) x Hours_per_week_b((30,40>)
+    12   565  1041    1.797    +0.145  Education(Some-college) => Target(>50K) | --- : Hours_per_week_b((40,50>) x Hours_per_week_b((30,40>)
+    13  1138  1429    1.520    +0.186  Education(Bachelors) => Target(>50K) | --- : Hours_per_week_b((40,50>) x Hours_per_week_b((30,40>)
+    14   498   602    1.310    +0.156  Education(Masters) => Target(>50K) | --- : Hours_per_week_b((40,50>) x Hours_per_week_b((30,40>)
+    15  3139  4465    1.687    +0.179  Sex(Male) => Target(>50K) | --- : Hours_per_week_b((40,50>) x Hours_per_week_b((30,40>)
+    16  3277  4894    1.918    +0.191  Country(United-States) => Target(>50K) | --- : Hours_per_week_b((40,50>) x Hours_per_week_b((30,40>)
+    17  3292  4767    1.851    +0.185  Race(White) => Target(>50K) | --- : Hours_per_week_b((40,50>) x Hours_per_week_b((30,40>)
+    18  2390  3495    2.080    +0.196  Workclass(Private) => Target(>50K) | --- : Hours_per_week_b((40,50>) x Hours_per_week_b((30,40>)
+    19  1243  4328    2.160    +0.203  Capital_Gain_b(<-1,0>) => Target(>50K) | --- : Hours_per_week_b((50,60>) x Hours_per_week_b((30,40>)
+    20  1443  4934    2.130    +0.219  Capital_Loss_b(<-1,0>) => Target(>50K) | --- : Hours_per_week_b((50,60>) x Hours_per_week_b((30,40>)
+    21   539  1074    1.627    +0.243  Occupation(Exec-managerial) => Target(>50K) | --- : Hours_per_week_b((50,60>) x Hours_per_week_b((30,40>)
+    22  1364  4720    1.410    +0.165  Martial_Status(Married-civ-spouse) => Target(>50K) | --- : Hours_per_week_b((50,60>) x Hours_per_week_b((30,40>)
+    23  1314  4050    1.433    +0.173  Relationship(Husband) => Target(>50K) | --- : Hours_per_week_b((50,60>) x Hours_per_week_b((30,40>)
+    24   557  1527    2.121    +0.237  Age_b((30,40>) => Target(>50K) | --- : Hours_per_week_b((50,60>) x Hours_per_week_b((30,40>)
+    25   568  1855    1.646    +0.207  Age_b((40,50>) => Target(>50K) | --- : Hours_per_week_b((50,60>) x Hours_per_week_b((30,40>)
+    26  1482  4465    1.807    +0.210  Sex(Male) => Target(>50K) | --- : Hours_per_week_b((50,60>) x Hours_per_week_b((30,40>)
+    27  1492  4894    2.094    +0.227  Country(United-States) => Target(>50K) | --- : Hours_per_week_b((50,60>) x Hours_per_week_b((30,40>)
+    28  1507  4767    2.029    +0.224  Race(White) => Target(>50K) | --- : Hours_per_week_b((50,60>) x Hours_per_week_b((30,40>)
+    29   966  3495    2.270    +0.230  Workclass(Private) => Target(>50K) | --- : Hours_per_week_b((50,60>) x Hours_per_week_b((30,40>)
+    30  1243  2740    1.087    +0.030  Capital_Gain_b(<-1,0>) => Target(>50K) | --- : Hours_per_week_b((50,60>) x Hours_per_week_b((40,50>)
+    31  1443  3164    1.089    +0.034  Capital_Loss_b(<-1,0>) => Target(>50K) | --- : Hours_per_week_b((50,60>) x Hours_per_week_b((40,50>)
+    32   539  1064    1.074    +0.043  Occupation(Exec-managerial) => Target(>50K) | --- : Hours_per_week_b((50,60>) x Hours_per_week_b((40,50>)
+    33   557  1211    1.077    +0.032  Age_b((30,40>) => Target(>50K) | --- : Hours_per_week_b((50,60>) x Hours_per_week_b((40,50>)
+    34  1482  3139    1.071    +0.031  Sex(Male) => Target(>50K) | --- : Hours_per_week_b((50,60>) x Hours_per_week_b((40,50>)
+    35  1492  3277    1.091    +0.036  Country(United-States) => Target(>50K) | --- : Hours_per_week_b((50,60>) x Hours_per_week_b((40,50>)
+    36  1507  3292    1.096    +0.039  Race(White) => Target(>50K) | --- : Hours_per_week_b((50,60>) x Hours_per_week_b((40,50>)
+    37   966  2390    1.092    +0.035  Workclass(Private) => Target(>50K) | --- : Hours_per_week_b((50,60>) x Hours_per_week_b((40,50>)
+
+Rule id 1: Action rule : , p1=0.3480248952114823, p2=0.17516593815768172, z-value: 32.41, p-value 1.0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000, relbase1 0.056099258834609554, relbase2 0.08861225994021539
+Rule id 2: Action rule : , p1=0.3782879005260641, p2=0.19349019607843138, z-value: 34.38, p-value 1.0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000, relbase1 0.06478031202653455, relbase2 0.10101961426641005
+Rule id 3: Action rule : , p1=0.58719646799117, p2=0.3875857091302779, z-value: 13.24, p-value 1.0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000, relbase1 0.021784529708038163, relbase2 0.021989271528602434
+Rule id 4: Action rule : , p1=0.571810287241149, p2=0.42036553524804177, z-value: 9.62, p-value 1.0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000, relbase1 0.01752589984030138, relbase2 0.026370746488677776
+Rule id 5: Action rule : , p1=0.40600924499229585, p2=0.22814025743453173, z-value: 11.21, p-value 1.0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000, relbase1 0.010789893943736948, relbase2 0.010523729577003399
+Rule id 6: Action rule : , p1=0.5622014141028091, p2=0.40362579100393364, z-value: 19.16, p-value 1.0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000, relbase1 0.06023504361000778, relbase2 0.0966381393063347
+Rule id 7: Action rule : , p1=0.5620661494487545, p2=0.4, z-value: 18.71, p-value 1.0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000, relbase1 0.05636542320134311, relbase2 0.08292043732852873
+Rule id 8: Action rule : , p1=0.41715466758525666, p2=0.21178918169209432, z-value: 21.03, p-value 1.0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000, relbase1 0.02479423447033291, relbase2 0.031264076000163794
+Rule id 9: Action rule : , p1=0.5096234309623431, p2=0.3211009174311927, z-value: 16.00, p-value 1.0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000, relbase1 0.0249375537447279, relbase2 0.0379796077146718
+Rule id 10: Action rule : , p1=0.5004163197335554, p2=0.317805953693495, z-value: 11.41, p-value 1.0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000, relbase1 0.012304983415912534, relbase2 0.023606731911060153
+Rule id 11: Action rule : , p1=0.2439120188531029, p2=0.1417240659570027, z-value: 12.40, p-value 1.0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000, relbase1 0.012714467057041072, relbase2 0.027803939232627656
+Rule id 12: Action rule : , p1=0.3271569195136074, p2=0.18202482951564958, z-value: 12.85, p-value 1.0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000, relbase1 0.011567912861881169, relbase2 0.021313623520740347
+Rule id 13: Action rule : , p1=0.5429389312977099, p2=0.35725, z-value: 13.95, p-value 1.0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000, relbase1 0.02329961918021375, relbase2 0.029257606158633962
+Rule id 14: Action rule : , p1=0.6587301587301587, p2=0.5029239766081871, z-value: 6.76, p-value 0.9999999999931933336583256277663167566061019897460937500000000000000000000000000000000000000000000000, relbase1 0.01019614266410057, relbase2 0.01232545759796896
+Rule id 15: Action rule : , p1=0.43840782122905025, p2=0.259895227008149, z-value: 27.38, p-value 1.0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000, relbase1 0.06426845747512387, relbase2 0.09141722288194587
+Rule id 16: Action rule : , p1=0.39875882209783403, p2=0.20787495221509578, z-value: 34.08, p-value 1.0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000, relbase1 0.06709389459891077, relbase2 0.10020064698415299
+Rule id 17: Action rule : , p1=0.4024941924440641, p2=0.21747262773722628, z-value: 32.25, p-value 1.0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000, relbase1 0.06740100732975718, relbase2 0.09760042586298677
+Rule id 18: Action rule : , p1=0.37667454688731283, p2=0.18113500906970717, z-value: 32.13, p-value 1.0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000, relbase1 0.048933295114860165, relbase2 0.07155726628721183
+Rule id 19: Action rule : , p1=0.37838660578386607, p2=0.17516593815768172, z-value: 27.41, p-value 1.0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000, relbase1 0.02544940829613857, relbase2 0.08861225994021539
+Rule id 20: Action rule : , p1=0.4120502569960023, p2=0.19349019607843138, z-value: 29.28, p-value 1.0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000, relbase1 0.02954424470742394, relbase2 0.10101961426641005
+Rule id 21: Action rule : , p1=0.6304093567251462, p2=0.3875857091302779, z-value: 12.49, p-value 1.0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000, relbase1 0.01103558412841407, relbase2 0.021989271528602434
+Rule id 22: Action rule : , p1=0.5690446391322487, p2=0.40362579100393364, z-value: 14.90, p-value 1.0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000, relbase1 0.027926784324966217, relbase2 0.0966381393063347
+Rule id 23: Action rule : , p1=0.5730484081988662, p2=0.4, z-value: 15.11, p-value 1.0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000, relbase1 0.026903075222144874, relbase2 0.08292043732852873
+Rule id 24: Action rule : , p1=0.4491935483870968, p2=0.21178918169209432, z-value: 17.91, p-value 1.0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000, relbase1 0.011404119405429753, relbase2 0.031264076000163794
+Rule id 25: Action rule : , p1=0.5283720930232558, p2=0.3211009174311927, z-value: 13.05, p-value 1.0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000, relbase1 0.011629335408050449, relbase2 0.0379796077146718
+Rule id 26: Action rule : , p1=0.4697305863708399, p2=0.259895227008149, z-value: 23.82, p-value 1.0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000, relbase1 0.030342737807624587, relbase2 0.09141722288194587
+Rule id 27: Action rule : , p1=0.4352392065344224, p2=0.20787495221509578, z-value: 29.26, p-value 1.0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000, relbase1 0.030547479628188854, relbase2 0.10020064698415299
+Rule id 28: Action rule : , p1=0.4411592505854801, p2=0.21747262773722628, z-value: 28.17, p-value 1.0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000, relbase1 0.030854592359035257, relbase2 0.09760042586298677
+Rule id 29: Action rule : , p1=0.4112388250319285, p2=0.18113500906970717, z-value: 26.03, p-value 1.0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000, relbase1 0.019778059866508334, relbase2 0.07155726628721183
+Rule id 30: Action rule : , p1=0.37838660578386607, p2=0.3480248952114823, z-value: 3.05, p-value 0.9988595681387516522775626981456298381090164184570312500000000000000000000000000000000000000000000000, relbase1 0.02544940829613857, relbase2 0.056099258834609554
+Rule id 31: Action rule : , p1=0.4120502569960023, p2=0.3782879005260641, z-value: 3.44, p-value 0.9997112141137369789589683932717889547348022460937500000000000000000000000000000000000000000000000000, relbase1 0.02954424470742394, relbase2 0.06478031202653455
+Rule id 32: Action rule : , p1=0.6304093567251462, p2=0.58719646799117, z-value: 2.13, p-value 0.9832862746330912617764852257096208631992340087890625000000000000000000000000000000000000000000000000, relbase1 0.01103558412841407, relbase2 0.021784529708038163
+Rule id 33: Action rule : , p1=0.4491935483870968, p2=0.41715466758525666, z-value: 1.91, p-value 0.9718945485942841466808772565855178982019424438476562500000000000000000000000000000000000000000000000, relbase1 0.011404119405429753, relbase2 0.02479423447033291
+Rule id 34: Action rule : , p1=0.4697305863708399, p2=0.43840782122905025, z-value: 2.95, p-value 0.9983989424664883038929019676288589835166931152343750000000000000000000000000000000000000000000000000, relbase1 0.030342737807624587, relbase2 0.06426845747512387
+Rule id 35: Action rule : , p1=0.4352392065344224, p2=0.39875882209783403, z-value: 3.65, p-value 0.9998682144242180269699815653439145535230636596679687500000000000000000000000000000000000000000000000, relbase1 0.030547479628188854, relbase2 0.06709389459891077
+Rule id 36: Action rule : , p1=0.4411592505854801, p2=0.4024941924440641, z-value: 3.85, p-value 0.9999417913058218365662810356297995895147323608398437500000000000000000000000000000000000000000000000, relbase1 0.030854592359035257, relbase2 0.06740100732975718
+Rule id 37: Action rule : , p1=0.4112388250319285, p2=0.37667454688731283, z-value: 2.94, p-value 0.9983570390328238008947892012656666338443756103515625000000000000000000000000000000000000000000000000, relbase1 0.019778059866508334, relbase2 0.048933295114860165
+Total rules:37, out of them action rules:37, for relative base criteria filtered out 0, resulting rules 37
+[{'id': 2, 'rule_id': 2, 'z_score': 34.381942897903905}, {'id': 16, 'rule_id': 16, 'z_score': 34.08228541705755}, {'id': 1, 'rule_id': 1, 'z_score': 32.40663819035467}, {'id': 17, 'rule_id': 17, 'z_score': 32.24945568727685}, {'id': 18, 'rule_id': 18, 'z_score': 32.130689763049254}, {'id': 20, 'rule_id': 20, 'z_score': 29.28265399031252}, {'id': 27, 'rule_id': 27, 'z_score': 29.257157296539056}, {'id': 28, 'rule_id': 28, 'z_score': 28.172912993164584}, {'id': 19, 'rule_id': 19, 'z_score': 27.407872530571357}, {'id': 15, 'rule_id': 15, 'z_score': 27.38106596599841}, {'id': 29, 'rule_id': 29, 'z_score': 26.031001471559062}, {'id': 26, 'rule_id': 26, 'z_score': 23.815671928817796}, {'id': 8, 'rule_id': 8, 'z_score': 21.026204146375022}, {'id': 6, 'rule_id': 6, 'z_score': 19.15532611473157}, {'id': 7, 'rule_id': 7, 'z_score': 18.70645137938307}, {'id': 24, 'rule_id': 24, 'z_score': 17.914857493071896}, {'id': 9, 'rule_id': 9, 'z_score': 16.000512118762924}, {'id': 23, 'rule_id': 23, 'z_score': 15.105352607594456}, {'id': 22, 'rule_id': 22, 'z_score': 14.895049287384316}, {'id': 13, 'rule_id': 13, 'z_score': 13.9474677918337}, {'id': 3, 'rule_id': 3, 'z_score': 13.24381030896053}, {'id': 25, 'rule_id': 25, 'z_score': 13.051891548170456}, {'id': 12, 'rule_id': 12, 'z_score': 12.85144578350459}, {'id': 21, 'rule_id': 21, 'z_score': 12.490134859802936}, {'id': 11, 'rule_id': 11, 'z_score': 12.40272324220822}, {'id': 10, 'rule_id': 10, 'z_score': 11.405696683751845}, {'id': 5, 'rule_id': 5, 'z_score': 11.213244343180206}, {'id': 4, 'rule_id': 4, 'z_score': 9.622520154520892}, {'id': 14, 'rule_id': 14, 'z_score': 6.761965056834704}, {'id': 36, 'rule_id': 36, 'z_score': 3.8535501840929065}, {'id': 35, 'rule_id': 35, 'z_score': 3.6486995317000144}, {'id': 31, 'rule_id': 31, 'z_score': 3.441933708290528}, {'id': 30, 'rule_id': 30, 'z_score': 3.0509923680460553}, {'id': 34, 'rule_id': 34, 'z_score': 2.9476382776971204}, {'id': 37, 'rule_id': 37, 'z_score': 2.9396415013567894}, {'id': 32, 'rule_id': 32, 'z_score': 2.1269113367491332}, {'id': 33, 'rule_id': 33, 'z_score': 1.9093969588344204}]
+RULE 1: z-score 34.38, rule text:   Capital_Loss_b(<-1,0>) => Target(>50K) | --- : Hours_per_week_b((40,50>) x Hours_per_week_b((30,40>)
+RULE 2: z-score 34.08, rule text:   Country(United-States) => Target(>50K) | --- : Hours_per_week_b((40,50>) x Hours_per_week_b((30,40>)
+RULE 3: z-score 32.41, rule text:   Capital_Gain_b(<-1,0>) => Target(>50K) | --- : Hours_per_week_b((40,50>) x Hours_per_week_b((30,40>)
+RULE 4: z-score 32.25, rule text:   Race(White) => Target(>50K) | --- : Hours_per_week_b((40,50>) x Hours_per_week_b((30,40>)
+RULE 5: z-score 32.13, rule text:   Workclass(Private) => Target(>50K) | --- : Hours_per_week_b((40,50>) x Hours_per_week_b((30,40>)
+RULE 6: z-score 29.28, rule text:   Capital_Loss_b(<-1,0>) => Target(>50K) | --- : Hours_per_week_b((50,60>) x Hours_per_week_b((30,40>)
+RULE 7: z-score 29.26, rule text:   Country(United-States) => Target(>50K) | --- : Hours_per_week_b((50,60>) x Hours_per_week_b((30,40>)
+RULE 8: z-score 28.17, rule text:   Race(White) => Target(>50K) | --- : Hours_per_week_b((50,60>) x Hours_per_week_b((30,40>)
+RULE 9: z-score 27.41, rule text:   Capital_Gain_b(<-1,0>) => Target(>50K) | --- : Hours_per_week_b((50,60>) x Hours_per_week_b((30,40>)
+RULE 10: z-score 27.38, rule text:   Sex(Male) => Target(>50K) | --- : Hours_per_week_b((40,50>) x Hours_per_week_b((30,40>)
+RULE 11: z-score 26.03, rule text:   Workclass(Private) => Target(>50K) | --- : Hours_per_week_b((50,60>) x Hours_per_week_b((30,40>)
+RULE 12: z-score 23.82, rule text:   Sex(Male) => Target(>50K) | --- : Hours_per_week_b((50,60>) x Hours_per_week_b((30,40>)
+RULE 13: z-score 21.03, rule text:   Age_b((30,40>) => Target(>50K) | --- : Hours_per_week_b((40,50>) x Hours_per_week_b((30,40>)
+RULE 14: z-score 19.16, rule text:   Martial_Status(Married-civ-spouse) => Target(>50K) | --- : Hours_per_week_b((40,50>) x Hours_per_week_b((30,40>)
+RULE 15: z-score 18.71, rule text:   Relationship(Husband) => Target(>50K) | --- : Hours_per_week_b((40,50>) x Hours_per_week_b((30,40>)
+RULE 16: z-score 17.91, rule text:   Age_b((30,40>) => Target(>50K) | --- : Hours_per_week_b((50,60>) x Hours_per_week_b((30,40>)
+RULE 17: z-score 16.00, rule text:   Age_b((40,50>) => Target(>50K) | --- : Hours_per_week_b((40,50>) x Hours_per_week_b((30,40>)
+RULE 18: z-score 15.11, rule text:   Relationship(Husband) => Target(>50K) | --- : Hours_per_week_b((50,60>) x Hours_per_week_b((30,40>)
+RULE 19: z-score 14.90, rule text:   Martial_Status(Married-civ-spouse) => Target(>50K) | --- : Hours_per_week_b((50,60>) x Hours_per_week_b((30,40>)
+RULE 20: z-score 13.95, rule text:   Education(Bachelors) => Target(>50K) | --- : Hours_per_week_b((40,50>) x Hours_per_week_b((30,40>)
+RULE 21: z-score 13.24, rule text:   Occupation(Exec-managerial) => Target(>50K) | --- : Hours_per_week_b((40,50>) x Hours_per_week_b((30,40>)
+RULE 22: z-score 13.05, rule text:   Age_b((40,50>) => Target(>50K) | --- : Hours_per_week_b((50,60>) x Hours_per_week_b((30,40>)
+RULE 23: z-score 12.85, rule text:   Education(Some-college) => Target(>50K) | --- : Hours_per_week_b((40,50>) x Hours_per_week_b((30,40>)
+RULE 24: z-score 12.49, rule text:   Occupation(Exec-managerial) => Target(>50K) | --- : Hours_per_week_b((50,60>) x Hours_per_week_b((30,40>)
+RULE 25: z-score 12.40, rule text:   Education(HS-grad) => Target(>50K) | --- : Hours_per_week_b((40,50>) x Hours_per_week_b((30,40>)
+RULE 26: z-score 11.41, rule text:   Age_b((50,60>) => Target(>50K) | --- : Hours_per_week_b((40,50>) x Hours_per_week_b((30,40>)
+RULE 27: z-score 11.21, rule text:   Occupation(Sales) => Target(>50K) | --- : Hours_per_week_b((40,50>) x Hours_per_week_b((30,40>)
+RULE 28: z-score 9.62, rule text:   Occupation(Prof-specialty) => Target(>50K) | --- : Hours_per_week_b((40,50>) x Hours_per_week_b((30,40>)
+RULE 29: z-score 6.76, rule text:   Education(Masters) => Target(>50K) | --- : Hours_per_week_b((40,50>) x Hours_per_week_b((30,40>)
+RULE 30: z-score 3.85, rule text:   Race(White) => Target(>50K) | --- : Hours_per_week_b((50,60>) x Hours_per_week_b((40,50>)
+<class 'float'>
+...will go for dataset diabetes.zip, target Outcome, target_class 1, split_class BMI, ignore_vars nan, i.e. []
+......will go for column Outcome out of Index(['Pregnancies', 'Glucose', 'BloodPressure', 'SkinThickness', 'Insulin',
+       'BMI', 'DiabetesPedigreeFunction', 'Age', 'Outcome'],
+      dtype='object')
+[1 0]
+...ante is [{'name': 'Pregnancies', 'type': 'subset', 'minlen': 1, 'maxlen': 1}, {'name': 'Glucose', 'type': 'subset', 'minlen': 1, 'maxlen': 1}, {'name': 'BloodPressure', 'type': 'subset', 'minlen': 1, 'maxlen': 1}, {'name': 'SkinThickness', 'type': 'subset', 'minlen': 1, 'maxlen': 1}, {'name': 'Insulin', 'type': 'subset', 'minlen': 1, 'maxlen': 1}, {'name': 'DiabetesPedigreeFunction', 'type': 'subset', 'minlen': 1, 'maxlen': 1}, {'name': 'Age', 'type': 'subset', 'minlen': 1, 'maxlen': 1}]
+Cleverminer version 1.0.11.
+Warning: Python 3.10+ NOT detected. You should upgrade to Python 3.10 or greater to get better performance
+Starting data preparation ...
+Automatically reordering numeric categories ...
+Encoding columns into bit-form...
+Encoding columns into bit-form...done
+Data preparation finished.
+Will go for  SD4ftMiner
+Starting to mine rules.
+  0%|                                                    |Elapsed Time: 0:00:00
+ 11%|#####                                               |Elapsed Time: 0:00:00
+ 22%|###########                                         |Elapsed Time: 0:00:00
+ 40%|#####################                               |Elapsed Time: 0:00:00
+ 51%|###########################                         |Elapsed Time: 0:00:00
+ 62%|################################                    |Elapsed Time: 0:00:00
+ 72%|#####################################               |Elapsed Time: 0:00:00
+ 90%|##############################################      |Elapsed Time: 0:00:00
+100%|####################################################|Elapsed Time: 0:00:00
+Done. Total verifications : 6200, rules 41, times: prep 0.02sec, processing 0.49sec
+
+List of rules:
+RULEID BASE1 BASE2 RatioConf DeltaConf Rule
+     1    15    11    1.696    +0.150  Insulin((-0.001, 30.5]) => Outcome(1) | --- : BMI((28.2, 30.1]) x BMI((25.9, 28.2])
+     2    17    11    2.318    +0.284  Insulin((-0.001, 30.5]) => Outcome(1) | --- : BMI((30.1, 32.0]) x BMI((25.9, 28.2])
+     3    15    10    1.500    +0.217  SkinThickness((-0.001, 8.2]) => Outcome(1) | --- : BMI((30.1, 32.0]) x BMI((28.2, 30.1])
+     4    17    15    1.367    +0.134  Insulin((-0.001, 30.5]) => Outcome(1) | --- : BMI((30.1, 32.0]) x BMI((28.2, 30.1])
+     5    15    13    1.154    +0.087  SkinThickness((-0.001, 8.2]) => Outcome(1) | --- : BMI((30.1, 32.0]) x BMI((32.0, 33.7])
+     6    17    11    1.318    +0.121  Insulin((-0.001, 30.5]) => Outcome(1) | --- : BMI((30.1, 32.0]) x BMI((33.7, 35.49])
+     7    17    12    1.250    +0.100  Insulin((-0.001, 30.5]) => Outcome(1) | --- : BMI((30.1, 32.0]) x BMI((35.49, 37.8])
+     8    15     9    1.232    +0.123  SkinThickness((-0.001, 8.2]) => Outcome(1) | --- : BMI((30.1, 32.0]) x BMI((37.8, 41.5])
+     9    17    16    1.062    +0.029  Insulin((-0.001, 30.5]) => Outcome(1) | --- : BMI((30.1, 32.0]) x BMI((37.8, 41.5])
+    10    22    11    2.488    +0.321  Insulin((-0.001, 30.5]) => Outcome(1) | --- : BMI((32.0, 33.7]) x BMI((25.9, 28.2])
+    11    13    10    1.300    +0.130  SkinThickness((-0.001, 8.2]) => Outcome(1) | --- : BMI((32.0, 33.7]) x BMI((28.2, 30.1])
+    12    22    15    1.467    +0.171  Insulin((-0.001, 30.5]) => Outcome(1) | --- : BMI((32.0, 33.7]) x BMI((28.2, 30.1])
+    13    22    17    1.073    +0.037  Insulin((-0.001, 30.5]) => Outcome(1) | --- : BMI((32.0, 33.7]) x BMI((30.1, 32.0])
+    14    22    11    1.415    +0.157  Insulin((-0.001, 30.5]) => Outcome(1) | --- : BMI((32.0, 33.7]) x BMI((33.7, 35.49])
+    15    22    12    1.341    +0.137  Insulin((-0.001, 30.5]) => Outcome(1) | --- : BMI((32.0, 33.7]) x BMI((35.49, 37.8])
+    16    13     9    1.068    +0.036  SkinThickness((-0.001, 8.2]) => Outcome(1) | --- : BMI((32.0, 33.7]) x BMI((37.8, 41.5])
+    17    22    16    1.140    +0.066  Insulin((-0.001, 30.5]) => Outcome(1) | --- : BMI((32.0, 33.7]) x BMI((37.8, 41.5])
+    18    11    11    1.759    +0.164  Insulin((-0.001, 30.5]) => Outcome(1) | --- : BMI((33.7, 35.49]) x BMI((25.9, 28.2])
+    19    12    11    1.855    +0.184  Insulin((-0.001, 30.5]) => Outcome(1) | --- : BMI((35.49, 37.8]) x BMI((25.9, 28.2])
+    20    12    15    1.093    +0.034  Insulin((-0.001, 30.5]) => Outcome(1) | --- : BMI((35.49, 37.8]) x BMI((28.2, 30.1])
+    21    13    10    1.207    +0.159  Glucose((167.0, 199.0]) => Outcome(1) | --- : BMI((35.49, 37.8]) x BMI((33.7, 35.49])
+    22    12    11    1.055    +0.021  Insulin((-0.001, 30.5]) => Outcome(1) | --- : BMI((35.49, 37.8]) x BMI((33.7, 35.49])
+    23     8     9    1.333    +0.200  Insulin((210.0, 846.0]) => Outcome(1) | --- : BMI((35.49, 37.8]) x BMI((41.5, 67.1])
+    24    16    11    2.182    +0.255  Insulin((-0.001, 30.5]) => Outcome(1) | --- : BMI((37.8, 41.5]) x BMI((25.9, 28.2])
+    25     9    10    1.218    +0.095  SkinThickness((-0.001, 8.2]) => Outcome(1) | --- : BMI((37.8, 41.5]) x BMI((28.2, 30.1])
+    26    16    15    1.286    +0.105  Insulin((-0.001, 30.5]) => Outcome(1) | --- : BMI((37.8, 41.5]) x BMI((28.2, 30.1])
+    27    16    11    1.241    +0.091  Insulin((-0.001, 30.5]) => Outcome(1) | --- : BMI((37.8, 41.5]) x BMI((33.7, 35.49])
+    28    16    12    1.176    +0.071  Insulin((-0.001, 30.5]) => Outcome(1) | --- : BMI((37.8, 41.5]) x BMI((35.49, 37.8])
+    29    27    11    3.477    +0.534  Insulin((-0.001, 30.5]) => Outcome(1) | --- : BMI((41.5, 67.1]) x BMI((25.9, 28.2])
+    30    15    10    1.568    +0.247  SkinThickness((-0.001, 8.2]) => Outcome(1) | --- : BMI((41.5, 67.1]) x BMI((28.2, 30.1])
+    31    27    15    2.050    +0.384  Insulin((-0.001, 30.5]) => Outcome(1) | --- : BMI((41.5, 67.1]) x BMI((28.2, 30.1])
+    32    27    17    1.500    +0.250  Insulin((-0.001, 30.5]) => Outcome(1) | --- : BMI((41.5, 67.1]) x BMI((30.1, 32.0])
+    33    15    13    1.206    +0.117  SkinThickness((-0.001, 8.2]) => Outcome(1) | --- : BMI((41.5, 67.1]) x BMI((32.0, 33.7])
+    34    27    22    1.398    +0.213  Insulin((-0.001, 30.5]) => Outcome(1) | --- : BMI((41.5, 67.1]) x BMI((32.0, 33.7])
+    35    13    10    1.207    +0.159  Glucose((167.0, 199.0]) => Outcome(1) | --- : BMI((41.5, 67.1]) x BMI((33.7, 35.49])
+    36    27    11    1.977    +0.371  Insulin((-0.001, 30.5]) => Outcome(1) | --- : BMI((41.5, 67.1]) x BMI((33.7, 35.49])
+    37    27    12    1.875    +0.350  Insulin((-0.001, 30.5]) => Outcome(1) | --- : BMI((41.5, 67.1]) x BMI((35.49, 37.8])
+    38     8     8    1.200    +0.133  Age((42.6, 51.0]) => Outcome(1) | --- : BMI((41.5, 67.1]) x BMI((35.49, 37.8])
+    39    15     9    1.288    +0.152  SkinThickness((-0.001, 8.2]) => Outcome(1) | --- : BMI((41.5, 67.1]) x BMI((37.8, 41.5])
+    40    14    11    1.455    +0.208  SkinThickness((40.0, 99.0]) => Outcome(1) | --- : BMI((41.5, 67.1]) x BMI((37.8, 41.5])
+    41    27    16    1.594    +0.279  Insulin((-0.001, 30.5]) => Outcome(1) | --- : BMI((41.5, 67.1]) x BMI((37.8, 41.5])
+
+Rule id 1: Action rule : , p1=0.36585365853658536, p2=0.21568627450980393, z-value: 1.59, p-value 0.9440787927338818441569401329616084694862365722656250000000000000000000000000000000000000000000000000, relbase1 0.01953125, relbase2 0.014322916666666666
+Rule id 2: Action rule : , p1=0.5, p2=0.21568627450980393, z-value: 2.73, p-value 0.9968545276245647235313640521781053394079208374023437500000000000000000000000000000000000000000000000, relbase1 0.022135416666666668, relbase2 0.014322916666666666
+Rule id 3: Action rule : , p1=0.6521739130434783, p2=0.43478260869565216, z-value: 1.48, p-value 0.9305668111995398783520272445457521826028823852539062500000000000000000000000000000000000000000000000, relbase1 0.01953125, relbase2 0.013020833333333334
+Rule id 4: Action rule : , p1=0.5, p2=0.36585365853658536, z-value: 1.17, p-value 0.8788616906286884633558997848012950271368026733398437500000000000000000000000000000000000000000000000, relbase1 0.022135416666666668, relbase2 0.01953125
+Rule id 5: Action rule : , p1=0.6521739130434783, p2=0.5652173913043478, z-value: 0.60, p-value 0.7271506351188730121748449164442718029022216796875000000000000000000000000000000000000000000000000000, relbase1 0.01953125, relbase2 0.016927083333333332
+Rule id 6: Action rule : , p1=0.5, p2=0.3793103448275862, z-value: 0.96, p-value 0.8316918472897265601773142407182604074478149414062500000000000000000000000000000000000000000000000000, relbase1 0.022135416666666668, relbase2 0.014322916666666666
+Rule id 7: Action rule : , p1=0.5, p2=0.4, z-value: 0.80, p-value 0.7887142720197040102192431731964461505413055419921875000000000000000000000000000000000000000000000000, relbase1 0.022135416666666668, relbase2 0.015625
+Rule id 8: Action rule : , p1=0.6521739130434783, p2=0.5294117647058824, z-value: 0.78, p-value 0.7833217021138476621189283832791261374950408935546875000000000000000000000000000000000000000000000000, relbase1 0.01953125, relbase2 0.01171875
+Rule id 9: Action rule : , p1=0.5, p2=0.47058823529411764, z-value: 0.24, p-value 0.5958580851681924972496062764548696577548980712890625000000000000000000000000000000000000000000000000, relbase1 0.022135416666666668, relbase2 0.020833333333333332
+Rule id 10: Action rule : , p1=0.5365853658536586, p2=0.21568627450980393, z-value: 3.19, p-value 0.9992880167146220848906068567885085940361022949218750000000000000000000000000000000000000000000000000, relbase1 0.028645833333333332, relbase2 0.014322916666666666
+Rule id 11: Action rule : , p1=0.5652173913043478, p2=0.43478260869565216, z-value: 0.88, p-value 0.8118277532506722460325931933766696602106094360351562500000000000000000000000000000000000000000000000, relbase1 0.016927083333333332, relbase2 0.013020833333333334
+Rule id 12: Action rule : , p1=0.5365853658536586, p2=0.36585365853658536, z-value: 1.55, p-value 0.9398424096468043220653498792671598494052886962890625000000000000000000000000000000000000000000000000, relbase1 0.028645833333333332, relbase2 0.01953125
+Rule id 13: Action rule : , p1=0.5365853658536586, p2=0.5, z-value: 0.32, p-value 0.6238880002976787686463922000257298350334167480468750000000000000000000000000000000000000000000000000, relbase1 0.028645833333333332, relbase2 0.022135416666666668
+Rule id 14: Action rule : , p1=0.5365853658536586, p2=0.3793103448275862, z-value: 1.30, p-value 0.9029421673218431809715411873185075819492340087890625000000000000000000000000000000000000000000000000, relbase1 0.028645833333333332, relbase2 0.014322916666666666
+Rule id 15: Action rule : , p1=0.5365853658536586, p2=0.4, z-value: 1.14, p-value 0.8724415739142716841314495468395762145519256591796875000000000000000000000000000000000000000000000000, relbase1 0.028645833333333332, relbase2 0.015625
+Rule id 16: Action rule : , p1=0.5652173913043478, p2=0.5294117647058824, z-value: 0.23, p-value 0.5890183315760183502263203081383835524320602416992187500000000000000000000000000000000000000000000000, relbase1 0.016927083333333332, relbase2 0.01171875
+Rule id 17: Action rule : , p1=0.5365853658536586, p2=0.47058823529411764, z-value: 0.57, p-value 0.7153584512551530716351066985225770622491836547851562500000000000000000000000000000000000000000000000, relbase1 0.028645833333333332, relbase2 0.020833333333333332
+Rule id 18: Action rule : , p1=0.3793103448275862, p2=0.21568627450980393, z-value: 1.58, p-value 0.9424430680547766225885197854950092732906341552734375000000000000000000000000000000000000000000000000, relbase1 0.014322916666666666, relbase2 0.014322916666666666
+Rule id 19: Action rule : , p1=0.4, p2=0.21568627450980393, z-value: 1.78, p-value 0.9621756639280076850440082125714980065822601318359375000000000000000000000000000000000000000000000000, relbase1 0.015625, relbase2 0.014322916666666666
+Rule id 20: Action rule : , p1=0.4, p2=0.36585365853658536, z-value: 0.29, p-value 0.6151487307517983227356239694927353411912918090820312500000000000000000000000000000000000000000000000, relbase1 0.015625, relbase2 0.01953125
+Rule id 21: Action rule : , p1=0.9285714285714286, p2=0.7692307692307693, z-value: 1.16, p-value 0.8778951315456664517000717751216143369674682617187500000000000000000000000000000000000000000000000000, relbase1 0.016927083333333332, relbase2 0.013020833333333334
+Rule id 22: Action rule : , p1=0.4, p2=0.3793103448275862, z-value: 0.16, p-value 0.5647018032348529725794605838018469512462615966796875000000000000000000000000000000000000000000000000, relbase1 0.015625, relbase2 0.014322916666666666
+Rule id 23: Action rule : , p1=0.8, p2=0.6, z-value: 1.05, p-value 0.8531892280355470870034650943125598132610321044921875000000000000000000000000000000000000000000000000, relbase1 0.010416666666666666, relbase2 0.01171875
+Rule id 24: Action rule : , p1=0.47058823529411764, p2=0.21568627450980393, z-value: 2.47, p-value 0.9932994254240653519971715468273032456636428833007812500000000000000000000000000000000000000000000000, relbase1 0.020833333333333332, relbase2 0.014322916666666666
+Rule id 25: Action rule : , p1=0.5294117647058824, p2=0.43478260869565216, z-value: 0.59, p-value 0.7232277230830954639628771474235691130161285400390625000000000000000000000000000000000000000000000000, relbase1 0.01171875, relbase2 0.013020833333333334
+Rule id 26: Action rule : , p1=0.47058823529411764, p2=0.36585365853658536, z-value: 0.92, p-value 0.8204151702239250720793961590970866382122039794921875000000000000000000000000000000000000000000000000, relbase1 0.020833333333333332, relbase2 0.01953125
+Rule id 27: Action rule : , p1=0.47058823529411764, p2=0.3793103448275862, z-value: 0.73, p-value 0.7672115904784542195216090476606041193008422851562500000000000000000000000000000000000000000000000000, relbase1 0.020833333333333332, relbase2 0.014322916666666666
+Rule id 28: Action rule : , p1=0.47058823529411764, p2=0.4, z-value: 0.57, p-value 0.7150019635518369831572726980084553360939025878906250000000000000000000000000000000000000000000000000, relbase1 0.020833333333333332, relbase2 0.015625
+Rule id 29: Action rule : , p1=0.75, p2=0.21568627450980393, z-value: 4.95, p-value 0.9999996266936832522986833282629959285259246826171875000000000000000000000000000000000000000000000000, relbase1 0.03515625, relbase2 0.014322916666666666
+Rule id 30: Action rule : , p1=0.6818181818181818, p2=0.43478260869565216, z-value: 1.67, p-value 0.9522505859423346930014986355672590434551239013671875000000000000000000000000000000000000000000000000, relbase1 0.01953125, relbase2 0.013020833333333334
+Rule id 31: Action rule : , p1=0.75, p2=0.36585365853658536, z-value: 3.38, p-value 0.9996345829728970899807904970657546073198318481445312500000000000000000000000000000000000000000000000, relbase1 0.03515625, relbase2 0.01953125
+Rule id 32: Action rule : , p1=0.75, p2=0.5, z-value: 2.16, p-value 0.9847505084259484675612839055247604846954345703125000000000000000000000000000000000000000000000000000, relbase1 0.03515625, relbase2 0.022135416666666668
+Rule id 33: Action rule : , p1=0.6818181818181818, p2=0.5652173913043478, z-value: 0.81, p-value 0.7900094036864845348233643562707584351301193237304687500000000000000000000000000000000000000000000000, relbase1 0.01953125, relbase2 0.016927083333333332
+Rule id 34: Action rule : , p1=0.75, p2=0.5365853658536586, z-value: 1.94, p-value 0.9739548441978550519237955995777156203985214233398437500000000000000000000000000000000000000000000000, relbase1 0.03515625, relbase2 0.028645833333333332
+Rule id 35: Action rule : , p1=0.9285714285714286, p2=0.7692307692307693, z-value: 1.16, p-value 0.8778951315456664517000717751216143369674682617187500000000000000000000000000000000000000000000000000, relbase1 0.016927083333333332, relbase2 0.013020833333333334
+Rule id 36: Action rule : , p1=0.75, p2=0.3793103448275862, z-value: 3.01, p-value 0.9987138208384050974686374502198304980993270874023437500000000000000000000000000000000000000000000000, relbase1 0.03515625, relbase2 0.014322916666666666
+Rule id 37: Action rule : , p1=0.75, p2=0.4, z-value: 2.88, p-value 0.9980093318968883409070258494466543197631835937500000000000000000000000000000000000000000000000000000, relbase1 0.03515625, relbase2 0.015625
+Rule id 38: Action rule : , p1=0.8, p2=0.6666666666666666, z-value: 0.70, p-value 0.7577883176436122081298663033521734178066253662109375000000000000000000000000000000000000000000000000, relbase1 0.010416666666666666, relbase2 0.010416666666666666
+Rule id 39: Action rule : , p1=0.6818181818181818, p2=0.5294117647058824, z-value: 0.97, p-value 0.8340036811869850907896761782467365264892578125000000000000000000000000000000000000000000000000000000, relbase1 0.01953125, relbase2 0.01171875
+Rule id 40: Action rule : , p1=0.6666666666666666, p2=0.4583333333333333, z-value: 1.40, p-value 0.9197096975310034006056980615539941936731338500976562500000000000000000000000000000000000000000000000, relbase1 0.018229166666666668, relbase2 0.014322916666666666
+Rule id 41: Action rule : , p1=0.75, p2=0.47058823529411764, z-value: 2.40, p-value 0.9918095241173665588263475001440383493900299072265625000000000000000000000000000000000000000000000000, relbase1 0.03515625, relbase2 0.020833333333333332
+Total rules:41, out of them action rules:41, for relative base criteria filtered out 0, resulting rules 41
+[{'id': 29, 'rule_id': 29, 'z_score': 4.948829106132422}, {'id': 31, 'rule_id': 31, 'z_score': 3.377742787937444}, {'id': 10, 'rule_id': 10, 'z_score': 3.1897484985086977}, {'id': 36, 'rule_id': 36, 'z_score': 3.0146973113412012}, {'id': 37, 'rule_id': 37, 'z_score': 2.879636729226048}, {'id': 2, 'rule_id': 2, 'z_score': 2.7322182761334717}, {'id': 24, 'rule_id': 24, 'z_score': 2.472927059539974}, {'id': 41, 'rule_id': 41, 'z_score': 2.4003153767554664}, {'id': 32, 'rule_id': 32, 'z_score': 2.1635489492831117}, {'id': 34, 'rule_id': 34, 'z_score': 1.9423866385605455}, {'id': 19, 'rule_id': 19, 'z_score': 1.7765113542950757}, {'id': 30, 'rule_id': 30, 'z_score': 1.6670783417789512}, {'id': 1, 'rule_id': 1, 'z_score': 1.5899662422135228}, {'id': 18, 'rule_id': 18, 'z_score': 1.5756180061719425}, {'id': 12, 'rule_id': 12, 'z_score': 1.5534520311915698}, {'id': 3, 'rule_id': 3, 'z_score': 1.48002573980191}, {'id': 40, 'rule_id': 40, 'z_score': 1.403121520040228}, {'id': 14, 'rule_id': 14, 'z_score': 1.2984997407647034}, {'id': 4, 'rule_id': 4, 'z_score': 1.1693153057130068}, {'id': 35, 'rule_id': 35, 'z_score': 1.1645289039281463}, {'id': 21, 'rule_id': 21, 'z_score': 1.1645289039281463}, {'id': 15, 'rule_id': 15, 'z_score': 1.138008693677637}, {'id': 23, 'rule_id': 23, 'z_score': 1.0502100630210076}, {'id': 39, 'rule_id': 39, 'z_score': 0.9701080484505057}, {'id': 6, 'rule_id': 6, 'z_score': 0.9608724483868636}, {'id': 26, 'rule_id': 26, 'z_score': 0.9169484388516335}, {'id': 11, 'rule_id': 11, 'z_score': 0.8846517369293826}, {'id': 33, 'rule_id': 33, 'z_score': 0.8064538763325166}, {'id': 7, 'rule_id': 7, 'z_score': 0.8019680226540242}, {'id': 8, 'rule_id': 8, 'z_score': 0.7834607467435618}, {'id': 27, 'rule_id': 27, 'z_score': 0.7296947040062487}, {'id': 38, 'rule_id': 38, 'z_score': 0.6992058987801015}, {'id': 5, 'rule_id': 5, 'z_score': 0.6042179781166441}, {'id': 25, 'rule_id': 25, 'z_score': 0.592457079217253}, {'id': 17, 'rule_id': 17, 'z_score': 0.5691076347238886}, {'id': 28, 'rule_id': 28, 'z_score': 0.5680572819973808}, {'id': 13, 'rule_id': 13, 'z_score': 0.3157082035576858}, {'id': 20, 'rule_id': 20, 'z_score': 0.2927640111054828}, {'id': 9, 'rule_id': 9, 'z_score': 0.242640596097312}, {'id': 16, 'rule_id': 16, 'z_score': 0.2250204866943747}, {'id': 22, 'rule_id': 22, 'z_score': 0.16290098721058452}]
+RULE 1: z-score 4.95, rule text:   Insulin((-0.001, 30.5]) => Outcome(1) | --- : BMI((41.5, 67.1]) x BMI((25.9, 28.2])
+RULE 2: z-score 3.38, rule text:   Insulin((-0.001, 30.5]) => Outcome(1) | --- : BMI((41.5, 67.1]) x BMI((28.2, 30.1])
+RULE 3: z-score 3.19, rule text:   Insulin((-0.001, 30.5]) => Outcome(1) | --- : BMI((32.0, 33.7]) x BMI((25.9, 28.2])
+RULE 4: z-score 3.01, rule text:   Insulin((-0.001, 30.5]) => Outcome(1) | --- : BMI((41.5, 67.1]) x BMI((33.7, 35.49])
+RULE 5: z-score 2.88, rule text:   Insulin((-0.001, 30.5]) => Outcome(1) | --- : BMI((41.5, 67.1]) x BMI((35.49, 37.8])
+RULE 6: z-score 2.73, rule text:   Insulin((-0.001, 30.5]) => Outcome(1) | --- : BMI((30.1, 32.0]) x BMI((25.9, 28.2])
+RULE 7: z-score 2.47, rule text:   Insulin((-0.001, 30.5]) => Outcome(1) | --- : BMI((37.8, 41.5]) x BMI((25.9, 28.2])
+RULE 8: z-score 2.40, rule text:   Insulin((-0.001, 30.5]) => Outcome(1) | --- : BMI((41.5, 67.1]) x BMI((37.8, 41.5])
+RULE 9: z-score 2.16, rule text:   Insulin((-0.001, 30.5]) => Outcome(1) | --- : BMI((41.5, 67.1]) x BMI((30.1, 32.0])
+RULE 10: z-score 1.94, rule text:   Insulin((-0.001, 30.5]) => Outcome(1) | --- : BMI((41.5, 67.1]) x BMI((32.0, 33.7])
+RULE 11: z-score 1.78, rule text:   Insulin((-0.001, 30.5]) => Outcome(1) | --- : BMI((35.49, 37.8]) x BMI((25.9, 28.2])
+RULE 12: z-score 1.67, rule text:   SkinThickness((-0.001, 8.2]) => Outcome(1) | --- : BMI((41.5, 67.1]) x BMI((28.2, 30.1])
+RULE 13: z-score 1.59, rule text:   Insulin((-0.001, 30.5]) => Outcome(1) | --- : BMI((28.2, 30.1]) x BMI((25.9, 28.2])
+RULE 14: z-score 1.58, rule text:   Insulin((-0.001, 30.5]) => Outcome(1) | --- : BMI((33.7, 35.49]) x BMI((25.9, 28.2])
+RULE 15: z-score 1.55, rule text:   Insulin((-0.001, 30.5]) => Outcome(1) | --- : BMI((32.0, 33.7]) x BMI((28.2, 30.1])
+RULE 16: z-score 1.48, rule text:   SkinThickness((-0.001, 8.2]) => Outcome(1) | --- : BMI((30.1, 32.0]) x BMI((28.2, 30.1])
+RULE 17: z-score 1.40, rule text:   SkinThickness((40.0, 99.0]) => Outcome(1) | --- : BMI((41.5, 67.1]) x BMI((37.8, 41.5])
+RULE 18: z-score 1.30, rule text:   Insulin((-0.001, 30.5]) => Outcome(1) | --- : BMI((32.0, 33.7]) x BMI((33.7, 35.49])
+RULE 19: z-score 1.17, rule text:   Insulin((-0.001, 30.5]) => Outcome(1) | --- : BMI((30.1, 32.0]) x BMI((28.2, 30.1])
+RULE 20: z-score 1.16, rule text:   Glucose((167.0, 199.0]) => Outcome(1) | --- : BMI((41.5, 67.1]) x BMI((33.7, 35.49])
+RULE 21: z-score 1.16, rule text:   Glucose((167.0, 199.0]) => Outcome(1) | --- : BMI((35.49, 37.8]) x BMI((33.7, 35.49])
+RULE 22: z-score 1.14, rule text:   Insulin((-0.001, 30.5]) => Outcome(1) | --- : BMI((32.0, 33.7]) x BMI((35.49, 37.8])
+RULE 23: z-score 1.05, rule text:   Insulin((210.0, 846.0]) => Outcome(1) | --- : BMI((35.49, 37.8]) x BMI((41.5, 67.1])
+RULE 24: z-score 0.97, rule text:   SkinThickness((-0.001, 8.2]) => Outcome(1) | --- : BMI((41.5, 67.1]) x BMI((37.8, 41.5])
+RULE 25: z-score 0.96, rule text:   Insulin((-0.001, 30.5]) => Outcome(1) | --- : BMI((30.1, 32.0]) x BMI((33.7, 35.49])
+RULE 26: z-score 0.92, rule text:   Insulin((-0.001, 30.5]) => Outcome(1) | --- : BMI((37.8, 41.5]) x BMI((28.2, 30.1])
+RULE 27: z-score 0.88, rule text:   SkinThickness((-0.001, 8.2]) => Outcome(1) | --- : BMI((32.0, 33.7]) x BMI((28.2, 30.1])
+RULE 28: z-score 0.81, rule text:   SkinThickness((-0.001, 8.2]) => Outcome(1) | --- : BMI((41.5, 67.1]) x BMI((32.0, 33.7])
+RULE 29: z-score 0.80, rule text:   Insulin((-0.001, 30.5]) => Outcome(1) | --- : BMI((30.1, 32.0]) x BMI((35.49, 37.8])
+RULE 30: z-score 0.78, rule text:   SkinThickness((-0.001, 8.2]) => Outcome(1) | --- : BMI((30.1, 32.0]) x BMI((37.8, 41.5])
+<class 'str'>
+...will go for dataset marketing_campaign.zip, target Response, target_class 1, split_class Recency, ignore_vars ID|Dt_Customer, i.e. ['ID', 'Dt_Customer']
+......will go for column Response out of Index(['ID', 'Year_Birth', 'Education', 'Marital_Status', 'Income', 'Kidhome',
+       'Teenhome', 'Dt_Customer', 'Recency', 'MntWines', 'MntFruits',
+       'MntMeatProducts', 'MntFishProducts', 'MntSweetProducts',
+       'MntGoldProds', 'NumDealsPurchases', 'NumWebPurchases',
+       'NumCatalogPurchases', 'NumStorePurchases', 'NumWebVisitsMonth',
+       'AcceptedCmp3', 'AcceptedCmp4', 'AcceptedCmp5', 'AcceptedCmp1',
+       'AcceptedCmp2', 'Complain', 'Z_CostContact', 'Z_Revenue', 'Response'],
+      dtype='object')
+[1 0]
+...ante is [{'name': 'Year_Birth', 'type': 'subset', 'minlen': 1, 'maxlen': 1}, {'name': 'Education', 'type': 'subset', 'minlen': 1, 'maxlen': 1}, {'name': 'Marital_Status', 'type': 'subset', 'minlen': 1, 'maxlen': 1}, {'name': 'Income', 'type': 'subset', 'minlen': 1, 'maxlen': 1}, {'name': 'Kidhome', 'type': 'subset', 'minlen': 1, 'maxlen': 1}, {'name': 'Teenhome', 'type': 'subset', 'minlen': 1, 'maxlen': 1}, {'name': 'MntWines', 'type': 'subset', 'minlen': 1, 'maxlen': 1}, {'name': 'MntFruits', 'type': 'subset', 'minlen': 1, 'maxlen': 1}, {'name': 'MntMeatProducts', 'type': 'subset', 'minlen': 1, 'maxlen': 1}, {'name': 'MntFishProducts', 'type': 'subset', 'minlen': 1, 'maxlen': 1}, {'name': 'MntSweetProducts', 'type': 'subset', 'minlen': 1, 'maxlen': 1}, {'name': 'MntGoldProds', 'type': 'subset', 'minlen': 1, 'maxlen': 1}, {'name': 'NumDealsPurchases', 'type': 'subset', 'minlen': 1, 'maxlen': 1}, {'name': 'NumWebPurchases', 'type': 'subset', 'minlen': 1, 'maxlen': 1}, {'name': 'NumCatalogPurchases', 'type': 'subset', 'minlen': 1, 'maxlen': 1}, {'name': 'NumStorePurchases', 'type': 'subset', 'minlen': 1, 'maxlen': 1}, {'name': 'NumWebVisitsMonth', 'type': 'subset', 'minlen': 1, 'maxlen': 1}, {'name': 'AcceptedCmp3', 'type': 'subset', 'minlen': 1, 'maxlen': 1}, {'name': 'AcceptedCmp4', 'type': 'subset', 'minlen': 1, 'maxlen': 1}, {'name': 'AcceptedCmp5', 'type': 'subset', 'minlen': 1, 'maxlen': 1}, {'name': 'AcceptedCmp1', 'type': 'subset', 'minlen': 1, 'maxlen': 1}, {'name': 'AcceptedCmp2', 'type': 'subset', 'minlen': 1, 'maxlen': 1}, {'name': 'Complain', 'type': 'subset', 'minlen': 1, 'maxlen': 1}, {'name': 'Z_CostContact', 'type': 'subset', 'minlen': 1, 'maxlen': 1}, {'name': 'Z_Revenue', 'type': 'subset', 'minlen': 1, 'maxlen': 1}]
+Cleverminer version 1.0.11.
+Warning: Python 3.10+ NOT detected. You should upgrade to Python 3.10 or greater to get better performance
+Starting data preparation ...
+Automatically reordering numeric categories ...
+WARNING: attribute ID has more than 100 values, will be ignored.
+ If you haven't set maximum number of categories and you really need more categories and you know what you are doing, please use max_categories option to increase allowed number of categories.
+WARNING: attribute Dt_Customer has more than 100 values, will be ignored.
+ If you haven't set maximum number of categories and you really need more categories and you know what you are doing, please use max_categories option to increase allowed number of categories.
+Encoding columns into bit-form...
+Encoding columns into bit-form...done
+Data preparation finished.
+Will go for  SD4ftMiner
+Starting to mine rules.
+  0%|                                                    |Elapsed Time: 0:00:00
+ 21%|###########                                         |Elapsed Time: 0:00:00
+ 43%|######################                              |Elapsed Time: 0:00:00
+ 66%|##################################                  |Elapsed Time: 0:00:00
+100%|####################################################|Elapsed Time: 0:00:00
+Done. Total verifications : 1925, rules 111, times: prep 0.05sec, processing 0.20sec
+
+List of rules:
+RULEID BASE1 BASE2 RatioConf DeltaConf Rule
+     1    62    31    2.178    +0.157  Education(Graduation) => Response(1) | --- : Recency((-0.001, 19.0]) x Recency((19.0, 39.0])
+     2    38    23    1.478    +0.065  Marital_Status(Married) => Response(1) | --- : Recency((-0.001, 19.0]) x Recency((19.0, 39.0])
+     3    37    29    1.331    +0.100  Marital_Status(Single) => Response(1) | --- : Recency((-0.001, 19.0]) x Recency((19.0, 39.0])
+     4    42    29    1.339    +0.114  Income((71819.0, 666666.0]) => Response(1) | --- : Recency((-0.001, 19.0]) x Recency((19.0, 39.0])
+     5   131    70    1.834    +0.133  Kidhome((-0.001, 1.0]) => Response(1) | --- : Recency((-0.001, 19.0]) x Recency((19.0, 39.0])
+     6   130    71    1.798    +0.129  Teenhome((-0.001, 1.0]) => Response(1) | --- : Recency((-0.001, 19.0]) x Recency((19.0, 39.0])
+     7    35    30    1.373    +0.120  MntWines((581.2, 1493.0]) => Response(1) | --- : Recency((-0.001, 19.0]) x Recency((19.0, 39.0])
+     8    34    24    1.338    +0.095  MntFruits((44.0, 199.0]) => Response(1) | --- : Recency((-0.001, 19.0]) x Recency((19.0, 39.0])
+     9    46    28    1.462    +0.160  MntMeatProducts((298.4, 1725.0]) => Response(1) | --- : Recency((-0.001, 19.0]) x Recency((19.0, 39.0])
+    10    38    23    1.598    +0.156  MntSweetProducts((14.0, 44.2]) => Response(1) | --- : Recency((-0.001, 19.0]) x Recency((19.0, 39.0])
+    11    30    26    1.304    +0.091  MntGoldProds((34.0, 73.0]) => Response(1) | --- : Recency((-0.001, 19.0]) x Recency((19.0, 39.0])
+    12    70    35    1.636    +0.121  NumDealsPurchases((-0.001, 1.0]) => Response(1) | --- : Recency((-0.001, 19.0]) x Recency((19.0, 39.0])
+    13    35    24    1.342    +0.119  NumCatalogPurchases((5.0, 28.0]) => Response(1) | --- : Recency((-0.001, 19.0]) x Recency((19.0, 39.0])
+    14    37    25    1.414    +0.097  NumWebVisitsMonth((-0.001, 3.0]) => Response(1) | --- : Recency((-0.001, 19.0]) x Recency((19.0, 39.0])
+    15   132    71    1.835    +0.132  AcceptedCmp3((-0.001, 1.0]) => Response(1) | --- : Recency((-0.001, 19.0]) x Recency((19.0, 39.0])
+    16   132    71    1.835    +0.132  AcceptedCmp4((-0.001, 1.0]) => Response(1) | --- : Recency((-0.001, 19.0]) x Recency((19.0, 39.0])
+    17   132    71    1.835    +0.132  AcceptedCmp5((-0.001, 1.0]) => Response(1) | --- : Recency((-0.001, 19.0]) x Recency((19.0, 39.0])
+    18   132    71    1.835    +0.132  AcceptedCmp1((-0.001, 1.0]) => Response(1) | --- : Recency((-0.001, 19.0]) x Recency((19.0, 39.0])
+    19   132    71    1.835    +0.132  AcceptedCmp2((-0.001, 1.0]) => Response(1) | --- : Recency((-0.001, 19.0]) x Recency((19.0, 39.0])
+    20   132    71    1.835    +0.132  Complain((-0.001, 1.0]) => Response(1) | --- : Recency((-0.001, 19.0]) x Recency((19.0, 39.0])
+    21    62    28    2.339    +0.167  Education(Graduation) => Response(1) | --- : Recency((-0.001, 19.0]) x Recency((39.0, 59.0])
+    22   131    53    2.450    +0.173  Kidhome((-0.001, 1.0]) => Response(1) | --- : Recency((-0.001, 19.0]) x Recency((39.0, 59.0])
+    23   130    53    2.409    +0.169  Teenhome((-0.001, 1.0]) => Response(1) | --- : Recency((-0.001, 19.0]) x Recency((39.0, 59.0])
+    24    35    23    1.772    +0.193  MntWines((581.2, 1493.0]) => Response(1) | --- : Recency((-0.001, 19.0]) x Recency((39.0, 59.0])
+    25    70    26    2.393    +0.181  NumDealsPurchases((-0.001, 1.0]) => Response(1) | --- : Recency((-0.001, 19.0]) x Recency((39.0, 59.0])
+    26   132    53    2.458    +0.172  AcceptedCmp3((-0.001, 1.0]) => Response(1) | --- : Recency((-0.001, 19.0]) x Recency((39.0, 59.0])
+    27   132    53    2.458    +0.172  AcceptedCmp4((-0.001, 1.0]) => Response(1) | --- : Recency((-0.001, 19.0]) x Recency((39.0, 59.0])
+    28   132    53    2.458    +0.172  AcceptedCmp5((-0.001, 1.0]) => Response(1) | --- : Recency((-0.001, 19.0]) x Recency((39.0, 59.0])
+    29   132    53    2.458    +0.172  AcceptedCmp1((-0.001, 1.0]) => Response(1) | --- : Recency((-0.001, 19.0]) x Recency((39.0, 59.0])
+    30   132    53    2.458    +0.172  AcceptedCmp2((-0.001, 1.0]) => Response(1) | --- : Recency((-0.001, 19.0]) x Recency((39.0, 59.0])
+    31   132    53    2.458    +0.172  Complain((-0.001, 1.0]) => Response(1) | --- : Recency((-0.001, 19.0]) x Recency((39.0, 59.0])
+    32    62    25    2.690    +0.183  Education(Graduation) => Response(1) | --- : Recency((-0.001, 19.0]) x Recency((59.0, 79.0])
+    33    42    28    1.468    +0.144  Income((71819.0, 666666.0]) => Response(1) | --- : Recency((-0.001, 19.0]) x Recency((59.0, 79.0])
+    34   131    49    2.548    +0.178  Kidhome((-0.001, 1.0]) => Response(1) | --- : Recency((-0.001, 19.0]) x Recency((59.0, 79.0])
+    35   130    48    2.570    +0.177  Teenhome((-0.001, 1.0]) => Response(1) | --- : Recency((-0.001, 19.0]) x Recency((59.0, 79.0])
+    36    35    26    1.568    +0.160  MntWines((581.2, 1493.0]) => Response(1) | --- : Recency((-0.001, 19.0]) x Recency((59.0, 79.0])
+    37    46    24    2.106    +0.265  MntMeatProducts((298.4, 1725.0]) => Response(1) | --- : Recency((-0.001, 19.0]) x Recency((59.0, 79.0])
+    38    28    24    1.406    +0.097  MntSweetProducts((44.2, 263.0]) => Response(1) | --- : Recency((-0.001, 19.0]) x Recency((59.0, 79.0])
+    39    70    33    1.961    +0.152  NumDealsPurchases((-0.001, 1.0]) => Response(1) | --- : Recency((-0.001, 19.0]) x Recency((59.0, 79.0])
+    40   132    49    2.582    +0.177  AcceptedCmp3((-0.001, 1.0]) => Response(1) | --- : Recency((-0.001, 19.0]) x Recency((59.0, 79.0])
+    41   132    49    2.582    +0.177  AcceptedCmp4((-0.001, 1.0]) => Response(1) | --- : Recency((-0.001, 19.0]) x Recency((59.0, 79.0])
+    42   132    49    2.582    +0.177  AcceptedCmp5((-0.001, 1.0]) => Response(1) | --- : Recency((-0.001, 19.0]) x Recency((59.0, 79.0])
+    43   132    49    2.582    +0.177  AcceptedCmp1((-0.001, 1.0]) => Response(1) | --- : Recency((-0.001, 19.0]) x Recency((59.0, 79.0])
+    44   132    49    2.582    +0.177  AcceptedCmp2((-0.001, 1.0]) => Response(1) | --- : Recency((-0.001, 19.0]) x Recency((59.0, 79.0])
+    45   132    49    2.582    +0.177  Complain((-0.001, 1.0]) => Response(1) | --- : Recency((-0.001, 19.0]) x Recency((59.0, 79.0])
+    46   131    29    4.376    +0.226  Kidhome((-0.001, 1.0]) => Response(1) | --- : Recency((-0.001, 19.0]) x Recency((79.0, 99.0])
+    47   130    27    4.622    +0.227  Teenhome((-0.001, 1.0]) => Response(1) | --- : Recency((-0.001, 19.0]) x Recency((79.0, 99.0])
+    48   132    29    4.462    +0.225  AcceptedCmp3((-0.001, 1.0]) => Response(1) | --- : Recency((-0.001, 19.0]) x Recency((79.0, 99.0])
+    49   132    29    4.462    +0.225  AcceptedCmp4((-0.001, 1.0]) => Response(1) | --- : Recency((-0.001, 19.0]) x Recency((79.0, 99.0])
+    50   132    29    4.462    +0.225  AcceptedCmp5((-0.001, 1.0]) => Response(1) | --- : Recency((-0.001, 19.0]) x Recency((79.0, 99.0])
+    51   132    29    4.462    +0.225  AcceptedCmp1((-0.001, 1.0]) => Response(1) | --- : Recency((-0.001, 19.0]) x Recency((79.0, 99.0])
+    52   132    29    4.462    +0.225  AcceptedCmp2((-0.001, 1.0]) => Response(1) | --- : Recency((-0.001, 19.0]) x Recency((79.0, 99.0])
+    53   132    29    4.462    +0.225  Complain((-0.001, 1.0]) => Response(1) | --- : Recency((-0.001, 19.0]) x Recency((79.0, 99.0])
+    54    31    28    1.074    +0.009  Education(Graduation) => Response(1) | --- : Recency((19.0, 39.0]) x Recency((39.0, 59.0])
+    55    70    53    1.336    +0.040  Kidhome((-0.001, 1.0]) => Response(1) | --- : Recency((19.0, 39.0]) x Recency((39.0, 59.0])
+    56    71    53    1.340    +0.041  Teenhome((-0.001, 1.0]) => Response(1) | --- : Recency((19.0, 39.0]) x Recency((39.0, 59.0])
+    57    30    23    1.290    +0.073  MntWines((581.2, 1493.0]) => Response(1) | --- : Recency((19.0, 39.0]) x Recency((39.0, 59.0])
+    58    35    26    1.463    +0.060  NumDealsPurchases((-0.001, 1.0]) => Response(1) | --- : Recency((19.0, 39.0]) x Recency((39.0, 59.0])
+    59    71    53    1.340    +0.040  AcceptedCmp3((-0.001, 1.0]) => Response(1) | --- : Recency((19.0, 39.0]) x Recency((39.0, 59.0])
+    60    71    53    1.340    +0.040  AcceptedCmp4((-0.001, 1.0]) => Response(1) | --- : Recency((19.0, 39.0]) x Recency((39.0, 59.0])
+    61    71    53    1.340    +0.040  AcceptedCmp5((-0.001, 1.0]) => Response(1) | --- : Recency((19.0, 39.0]) x Recency((39.0, 59.0])
+    62    71    53    1.340    +0.040  AcceptedCmp1((-0.001, 1.0]) => Response(1) | --- : Recency((19.0, 39.0]) x Recency((39.0, 59.0])
+    63    71    53    1.340    +0.040  AcceptedCmp2((-0.001, 1.0]) => Response(1) | --- : Recency((19.0, 39.0]) x Recency((39.0, 59.0])
+    64    71    53    1.340    +0.040  Complain((-0.001, 1.0]) => Response(1) | --- : Recency((19.0, 39.0]) x Recency((39.0, 59.0])
+    65    31    25    1.235    +0.025  Education(Graduation) => Response(1) | --- : Recency((19.0, 39.0]) x Recency((59.0, 79.0])
+    66    29    28    1.096    +0.030  Income((71819.0, 666666.0]) => Response(1) | --- : Recency((19.0, 39.0]) x Recency((59.0, 79.0])
+    67    70    49    1.390    +0.045  Kidhome((-0.001, 1.0]) => Response(1) | --- : Recency((19.0, 39.0]) x Recency((59.0, 79.0])
+    68    71    48    1.429    +0.048  Teenhome((-0.001, 1.0]) => Response(1) | --- : Recency((19.0, 39.0]) x Recency((59.0, 79.0])
+    69    30    26    1.141    +0.040  MntWines((581.2, 1493.0]) => Response(1) | --- : Recency((19.0, 39.0]) x Recency((59.0, 79.0])
+    70    28    24    1.440    +0.106  MntMeatProducts((298.4, 1725.0]) => Response(1) | --- : Recency((19.0, 39.0]) x Recency((59.0, 79.0])
+    71    35    33    1.199    +0.032  NumDealsPurchases((-0.001, 1.0]) => Response(1) | --- : Recency((19.0, 39.0]) x Recency((59.0, 79.0])
+    72    71    49    1.407    +0.046  AcceptedCmp3((-0.001, 1.0]) => Response(1) | --- : Recency((19.0, 39.0]) x Recency((59.0, 79.0])
+    73    71    49    1.407    +0.046  AcceptedCmp4((-0.001, 1.0]) => Response(1) | --- : Recency((19.0, 39.0]) x Recency((59.0, 79.0])
+    74    71    49    1.407    +0.046  AcceptedCmp5((-0.001, 1.0]) => Response(1) | --- : Recency((19.0, 39.0]) x Recency((59.0, 79.0])
+    75    71    49    1.407    +0.046  AcceptedCmp1((-0.001, 1.0]) => Response(1) | --- : Recency((19.0, 39.0]) x Recency((59.0, 79.0])
+    76    71    49    1.407    +0.046  AcceptedCmp2((-0.001, 1.0]) => Response(1) | --- : Recency((19.0, 39.0]) x Recency((59.0, 79.0])
+    77    71    49    1.407    +0.046  Complain((-0.001, 1.0]) => Response(1) | --- : Recency((19.0, 39.0]) x Recency((59.0, 79.0])
+    78    70    29    2.386    +0.093  Kidhome((-0.001, 1.0]) => Response(1) | --- : Recency((19.0, 39.0]) x Recency((79.0, 99.0])
+    79    71    27    2.570    +0.098  Teenhome((-0.001, 1.0]) => Response(1) | --- : Recency((19.0, 39.0]) x Recency((79.0, 99.0])
+    80    71    29    2.432    +0.093  AcceptedCmp3((-0.001, 1.0]) => Response(1) | --- : Recency((19.0, 39.0]) x Recency((79.0, 99.0])
+    81    71    29    2.432    +0.093  AcceptedCmp4((-0.001, 1.0]) => Response(1) | --- : Recency((19.0, 39.0]) x Recency((79.0, 99.0])
+    82    71    29    2.432    +0.093  AcceptedCmp5((-0.001, 1.0]) => Response(1) | --- : Recency((19.0, 39.0]) x Recency((79.0, 99.0])
+    83    71    29    2.432    +0.093  AcceptedCmp1((-0.001, 1.0]) => Response(1) | --- : Recency((19.0, 39.0]) x Recency((79.0, 99.0])
+    84    71    29    2.432    +0.093  AcceptedCmp2((-0.001, 1.0]) => Response(1) | --- : Recency((19.0, 39.0]) x Recency((79.0, 99.0])
+    85    71    29    2.432    +0.093  Complain((-0.001, 1.0]) => Response(1) | --- : Recency((19.0, 39.0]) x Recency((79.0, 99.0])
+    86    28    25    1.150    +0.016  Education(Graduation) => Response(1) | --- : Recency((39.0, 59.0]) x Recency((59.0, 79.0])
+    87    53    48    1.067    +0.008  Teenhome((-0.001, 1.0]) => Response(1) | --- : Recency((39.0, 59.0]) x Recency((59.0, 79.0])
+    88    53    49    1.050    +0.006  AcceptedCmp3((-0.001, 1.0]) => Response(1) | --- : Recency((39.0, 59.0]) x Recency((59.0, 79.0])
+    89    53    49    1.050    +0.006  AcceptedCmp4((-0.001, 1.0]) => Response(1) | --- : Recency((39.0, 59.0]) x Recency((59.0, 79.0])
+    90    53    49    1.050    +0.006  AcceptedCmp5((-0.001, 1.0]) => Response(1) | --- : Recency((39.0, 59.0]) x Recency((59.0, 79.0])
+    91    53    49    1.050    +0.006  AcceptedCmp1((-0.001, 1.0]) => Response(1) | --- : Recency((39.0, 59.0]) x Recency((59.0, 79.0])
+    92    53    49    1.050    +0.006  AcceptedCmp2((-0.001, 1.0]) => Response(1) | --- : Recency((39.0, 59.0]) x Recency((59.0, 79.0])
+    93    53    49    1.050    +0.006  Complain((-0.001, 1.0]) => Response(1) | --- : Recency((39.0, 59.0]) x Recency((59.0, 79.0])
+    94    53    29    1.786    +0.053  Kidhome((-0.001, 1.0]) => Response(1) | --- : Recency((39.0, 59.0]) x Recency((79.0, 99.0])
+    95    53    27    1.918    +0.058  Teenhome((-0.001, 1.0]) => Response(1) | --- : Recency((39.0, 59.0]) x Recency((79.0, 99.0])
+    96    53    29    1.815    +0.053  AcceptedCmp3((-0.001, 1.0]) => Response(1) | --- : Recency((39.0, 59.0]) x Recency((79.0, 99.0])
+    97    53    29    1.815    +0.053  AcceptedCmp4((-0.001, 1.0]) => Response(1) | --- : Recency((39.0, 59.0]) x Recency((79.0, 99.0])
+    98    53    29    1.815    +0.053  AcceptedCmp5((-0.001, 1.0]) => Response(1) | --- : Recency((39.0, 59.0]) x Recency((79.0, 99.0])
+    99    53    29    1.815    +0.053  AcceptedCmp1((-0.001, 1.0]) => Response(1) | --- : Recency((39.0, 59.0]) x Recency((79.0, 99.0])
+   100    53    29    1.815    +0.053  AcceptedCmp2((-0.001, 1.0]) => Response(1) | --- : Recency((39.0, 59.0]) x Recency((79.0, 99.0])
+   101    53    29    1.815    +0.053  Complain((-0.001, 1.0]) => Response(1) | --- : Recency((39.0, 59.0]) x Recency((79.0, 99.0])
+   102    26    23    1.130    +0.033  MntWines((581.2, 1493.0]) => Response(1) | --- : Recency((59.0, 79.0]) x Recency((39.0, 59.0])
+   103    33    26    1.220    +0.029  NumDealsPurchases((-0.001, 1.0]) => Response(1) | --- : Recency((59.0, 79.0]) x Recency((39.0, 59.0])
+   104    49    29    1.717    +0.048  Kidhome((-0.001, 1.0]) => Response(1) | --- : Recency((59.0, 79.0]) x Recency((79.0, 99.0])
+   105    48    27    1.799    +0.050  Teenhome((-0.001, 1.0]) => Response(1) | --- : Recency((59.0, 79.0]) x Recency((79.0, 99.0])
+   106    49    29    1.728    +0.047  AcceptedCmp3((-0.001, 1.0]) => Response(1) | --- : Recency((59.0, 79.0]) x Recency((79.0, 99.0])
+   107    49    29    1.728    +0.047  AcceptedCmp4((-0.001, 1.0]) => Response(1) | --- : Recency((59.0, 79.0]) x Recency((79.0, 99.0])
+   108    49    29    1.728    +0.047  AcceptedCmp5((-0.001, 1.0]) => Response(1) | --- : Recency((59.0, 79.0]) x Recency((79.0, 99.0])
+   109    49    29    1.728    +0.047  AcceptedCmp1((-0.001, 1.0]) => Response(1) | --- : Recency((59.0, 79.0]) x Recency((79.0, 99.0])
+   110    49    29    1.728    +0.047  AcceptedCmp2((-0.001, 1.0]) => Response(1) | --- : Recency((59.0, 79.0]) x Recency((79.0, 99.0])
+   111    49    29    1.728    +0.047  Complain((-0.001, 1.0]) => Response(1) | --- : Recency((59.0, 79.0]) x Recency((79.0, 99.0])
+
+Rule id 1: Action rule : , p1=0.29107981220657275, p2=0.1336206896551724, z-value: 4.08, p-value 0.9999775808402618926251648190373089164495468139648437500000000000000000000000000000000000000000000000, relbase1 0.027678571428571427, relbase2 0.013839285714285714
+Rule id 2: Action rule : , p1=0.2, p2=0.13529411764705881, z-value: 1.63, p-value 0.9488483379593257716067000728799030184745788574218750000000000000000000000000000000000000000000000000, relbase1 0.016964285714285713, relbase2 0.010267857142857143
+Rule id 3: Action rule : , p1=0.40217391304347827, p2=0.3020833333333333, z-value: 1.44, p-value 0.9246847203874151155389427003683522343635559082031250000000000000000000000000000000000000000000000000, relbase1 0.016517857142857143, relbase2 0.012946428571428572
+Rule id 4: Action rule : , p1=0.45161290322580644, p2=0.3372093023255814, z-value: 1.56, p-value 0.9409977747870643671745938263484276831150054931640625000000000000000000000000000000000000000000000000, relbase1 0.01875, relbase2 0.012946428571428572
+Rule id 5: Action rule : , p1=0.2924107142857143, p2=0.15945330296127563, z-value: 4.73, p-value 0.9999988728393951475936773931607604026794433593750000000000000000000000000000000000000000000000000000, relbase1 0.05848214285714286, relbase2 0.03125
+Rule id 6: Action rule : , p1=0.289532293986637, p2=0.16099773242630386, z-value: 4.59, p-value 0.9999977312614435343007812662108335644006729125976562500000000000000000000000000000000000000000000000, relbase1 0.05803571428571429, relbase2 0.03169642857142857
+Rule id 7: Action rule : , p1=0.4430379746835443, p2=0.3225806451612903, z-value: 1.62, p-value 0.9477793226200733611719329019251745194196701049804687500000000000000000000000000000000000000000000000, relbase1 0.015625, relbase2 0.013392857142857142
+Rule id 8: Action rule : , p1=0.37777777777777777, p2=0.2823529411764706, z-value: 1.34, p-value 0.9099271983315861955787795523065142333507537841796875000000000000000000000000000000000000000000000000, relbase1 0.015178571428571428, relbase2 0.010714285714285714
+Rule id 9: Action rule : , p1=0.5054945054945055, p2=0.345679012345679, z-value: 2.11, p-value 0.9827033456691840473951060630497522652149200439453125000000000000000000000000000000000000000000000000, relbase1 0.020535714285714286, relbase2 0.0125
+Rule id 10: Action rule : , p1=0.4175824175824176, p2=0.26136363636363635, z-value: 2.20, p-value 0.9862564285154721277493194975249934941530227661132812500000000000000000000000000000000000000000000000, relbase1 0.016964285714285713, relbase2 0.010267857142857143
+Rule id 11: Action rule : , p1=0.38961038961038963, p2=0.2988505747126437, z-value: 1.22, p-value 0.8893820373621963426558068022131919860839843750000000000000000000000000000000000000000000000000000000, relbase1 0.013392857142857142, relbase2 0.011607142857142858
+Rule id 12: Action rule : , p1=0.3111111111111111, p2=0.19021739130434784, z-value: 2.78, p-value 0.9973187897307418392500721893156878650188446044921875000000000000000000000000000000000000000000000000, relbase1 0.03125, relbase2 0.015625
+Rule id 13: Action rule : , p1=0.4666666666666667, p2=0.34782608695652173, z-value: 1.45, p-value 0.9262833711541138548284379794495180249214172363281250000000000000000000000000000000000000000000000000, relbase1 0.015625, relbase2 0.010714285714285714
+Rule id 14: Action rule : , p1=0.33035714285714285, p2=0.2336448598130841, z-value: 1.59, p-value 0.9438603130637724936136123687901999801397323608398437500000000000000000000000000000000000000000000000, relbase1 0.016517857142857143, relbase2 0.011160714285714286
+Rule id 15: Action rule : , p1=0.2894736842105263, p2=0.15777777777777777, z-value: 4.75, p-value 0.9999989996093565647328205159283243119716644287109375000000000000000000000000000000000000000000000000, relbase1 0.05892857142857143, relbase2 0.03169642857142857
+Rule id 16: Action rule : , p1=0.2894736842105263, p2=0.15777777777777777, z-value: 4.75, p-value 0.9999989996093565647328205159283243119716644287109375000000000000000000000000000000000000000000000000, relbase1 0.05892857142857143, relbase2 0.03169642857142857
+Rule id 17: Action rule : , p1=0.2894736842105263, p2=0.15777777777777777, z-value: 4.75, p-value 0.9999989996093565647328205159283243119716644287109375000000000000000000000000000000000000000000000000, relbase1 0.05892857142857143, relbase2 0.03169642857142857
+Rule id 18: Action rule : , p1=0.2894736842105263, p2=0.15777777777777777, z-value: 4.75, p-value 0.9999989996093565647328205159283243119716644287109375000000000000000000000000000000000000000000000000, relbase1 0.05892857142857143, relbase2 0.03169642857142857
+Rule id 19: Action rule : , p1=0.2894736842105263, p2=0.15777777777777777, z-value: 4.75, p-value 0.9999989996093565647328205159283243119716644287109375000000000000000000000000000000000000000000000000, relbase1 0.05892857142857143, relbase2 0.03169642857142857
+Rule id 20: Action rule : , p1=0.2894736842105263, p2=0.15777777777777777, z-value: 4.75, p-value 0.9999989996093565647328205159283243119716644287109375000000000000000000000000000000000000000000000000, relbase1 0.05892857142857143, relbase2 0.03169642857142857
+Rule id 21: Action rule : , p1=0.29107981220657275, p2=0.12444444444444444, z-value: 4.31, p-value 0.9999919815921141097447844003909267485141754150390625000000000000000000000000000000000000000000000000, relbase1 0.027678571428571427, relbase2 0.0125
+Rule id 22: Action rule : , p1=0.2924107142857143, p2=0.11936936936936937, z-value: 6.39, p-value 0.9999999999149277174481653673865366727113723754882812500000000000000000000000000000000000000000000000, relbase1 0.05848214285714286, relbase2 0.023660714285714285
+Rule id 23: Action rule : , p1=0.289532293986637, p2=0.12018140589569161, z-value: 6.25, p-value 0.9999999997949565733179611015657428652048110961914062500000000000000000000000000000000000000000000000, relbase1 0.05803571428571429, relbase2 0.023660714285714285
+Rule id 24: Action rule : , p1=0.4430379746835443, p2=0.25, z-value: 2.66, p-value 0.9960725646523852505609397667285520583391189575195312500000000000000000000000000000000000000000000000, relbase1 0.015625, relbase2 0.010267857142857143
+Rule id 25: Action rule : , p1=0.3111111111111111, p2=0.13, z-value: 4.46, p-value 0.9999958382236170395529484267171937972307205200195312500000000000000000000000000000000000000000000000, relbase1 0.03125, relbase2 0.011607142857142858
+Rule id 26: Action rule : , p1=0.2894736842105263, p2=0.11777777777777777, z-value: 6.41, p-value 0.9999999999272485284862455046095419675111770629882812500000000000000000000000000000000000000000000000, relbase1 0.05892857142857143, relbase2 0.023660714285714285
+Rule id 27: Action rule : , p1=0.2894736842105263, p2=0.11777777777777777, z-value: 6.41, p-value 0.9999999999272485284862455046095419675111770629882812500000000000000000000000000000000000000000000000, relbase1 0.05892857142857143, relbase2 0.023660714285714285
+Rule id 28: Action rule : , p1=0.2894736842105263, p2=0.11777777777777777, z-value: 6.41, p-value 0.9999999999272485284862455046095419675111770629882812500000000000000000000000000000000000000000000000, relbase1 0.05892857142857143, relbase2 0.023660714285714285
+Rule id 29: Action rule : , p1=0.2894736842105263, p2=0.11777777777777777, z-value: 6.41, p-value 0.9999999999272485284862455046095419675111770629882812500000000000000000000000000000000000000000000000, relbase1 0.05892857142857143, relbase2 0.023660714285714285
+Rule id 30: Action rule : , p1=0.2894736842105263, p2=0.11777777777777777, z-value: 6.41, p-value 0.9999999999272485284862455046095419675111770629882812500000000000000000000000000000000000000000000000, relbase1 0.05892857142857143, relbase2 0.023660714285714285
+Rule id 31: Action rule : , p1=0.2894736842105263, p2=0.11777777777777777, z-value: 6.41, p-value 0.9999999999272485284862455046095419675111770629882812500000000000000000000000000000000000000000000000, relbase1 0.05892857142857143, relbase2 0.023660714285714285
+Rule id 32: Action rule : , p1=0.29107981220657275, p2=0.10822510822510822, z-value: 4.85, p-value 0.9999993812292545802833387824648525565862655639648437500000000000000000000000000000000000000000000000, relbase1 0.027678571428571427, relbase2 0.011160714285714286
+Rule id 33: Action rule : , p1=0.45161290322580644, p2=0.3076923076923077, z-value: 2.01, p-value 0.9778080388513586962417889481002930551767349243164062500000000000000000000000000000000000000000000000, relbase1 0.01875, relbase2 0.0125
+Rule id 34: Action rule : , p1=0.2924107142857143, p2=0.11475409836065574, z-value: 6.50, p-value 0.9999999999594237909406047037919051945209503173828125000000000000000000000000000000000000000000000000, relbase1 0.05848214285714286, relbase2 0.021875
+Rule id 35: Action rule : , p1=0.289532293986637, p2=0.11267605633802817, z-value: 6.50, p-value 0.9999999999586760557335196608619298785924911499023437500000000000000000000000000000000000000000000000, relbase1 0.05803571428571429, relbase2 0.02142857142857143
+Rule id 36: Action rule : , p1=0.4430379746835443, p2=0.2826086956521739, z-value: 2.18, p-value 0.9854958145854092466109364067960996180772781372070312500000000000000000000000000000000000000000000000, relbase1 0.015625, relbase2 0.011607142857142858
+Rule id 37: Action rule : , p1=0.5054945054945055, p2=0.24, z-value: 3.80, p-value 0.9999285856996595889256695954827591776847839355468750000000000000000000000000000000000000000000000000, relbase1 0.020535714285714286, relbase2 0.010714285714285714
+Rule id 38: Action rule : , p1=0.3373493975903614, p2=0.24, z-value: 1.45, p-value 0.9269786354801144989679073660227004438638687133789062500000000000000000000000000000000000000000000000, relbase1 0.0125, relbase2 0.010714285714285714
+Rule id 39: Action rule : , p1=0.3111111111111111, p2=0.15865384615384615, z-value: 3.72, p-value 0.9999013858207701499480890561244450509548187255859375000000000000000000000000000000000000000000000000, relbase1 0.03125, relbase2 0.014732142857142857
+Rule id 40: Action rule : , p1=0.2894736842105263, p2=0.11212814645308924, z-value: 6.59, p-value 0.9999999999780186943354465256561525166034698486328125000000000000000000000000000000000000000000000000, relbase1 0.05892857142857143, relbase2 0.021875
+Rule id 41: Action rule : , p1=0.2894736842105263, p2=0.11212814645308924, z-value: 6.59, p-value 0.9999999999780186943354465256561525166034698486328125000000000000000000000000000000000000000000000000, relbase1 0.05892857142857143, relbase2 0.021875
+Rule id 42: Action rule : , p1=0.2894736842105263, p2=0.11212814645308924, z-value: 6.59, p-value 0.9999999999780186943354465256561525166034698486328125000000000000000000000000000000000000000000000000, relbase1 0.05892857142857143, relbase2 0.021875
+Rule id 43: Action rule : , p1=0.2894736842105263, p2=0.11212814645308924, z-value: 6.59, p-value 0.9999999999780186943354465256561525166034698486328125000000000000000000000000000000000000000000000000, relbase1 0.05892857142857143, relbase2 0.021875
+Rule id 44: Action rule : , p1=0.2894736842105263, p2=0.11212814645308924, z-value: 6.59, p-value 0.9999999999780186943354465256561525166034698486328125000000000000000000000000000000000000000000000000, relbase1 0.05892857142857143, relbase2 0.021875
+Rule id 45: Action rule : , p1=0.2894736842105263, p2=0.11212814645308924, z-value: 6.59, p-value 0.9999999999780186943354465256561525166034698486328125000000000000000000000000000000000000000000000000, relbase1 0.05892857142857143, relbase2 0.021875
+Rule id 46: Action rule : , p1=0.2924107142857143, p2=0.06682027649769585, z-value: 8.69, p-value 1.0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000, relbase1 0.05848214285714286, relbase2 0.012946428571428572
+Rule id 47: Action rule : , p1=0.289532293986637, p2=0.06264501160092807, z-value: 8.79, p-value 1.0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000, relbase1 0.05803571428571429, relbase2 0.012053571428571429
+Rule id 48: Action rule : , p1=0.2894736842105263, p2=0.06487695749440715, z-value: 8.82, p-value 1.0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000, relbase1 0.05892857142857143, relbase2 0.012946428571428572
+Rule id 49: Action rule : , p1=0.2894736842105263, p2=0.06487695749440715, z-value: 8.82, p-value 1.0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000, relbase1 0.05892857142857143, relbase2 0.012946428571428572
+Rule id 50: Action rule : , p1=0.2894736842105263, p2=0.06487695749440715, z-value: 8.82, p-value 1.0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000, relbase1 0.05892857142857143, relbase2 0.012946428571428572
+Rule id 51: Action rule : , p1=0.2894736842105263, p2=0.06487695749440715, z-value: 8.82, p-value 1.0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000, relbase1 0.05892857142857143, relbase2 0.012946428571428572
+Rule id 52: Action rule : , p1=0.2894736842105263, p2=0.06487695749440715, z-value: 8.82, p-value 1.0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000, relbase1 0.05892857142857143, relbase2 0.012946428571428572
+Rule id 53: Action rule : , p1=0.2894736842105263, p2=0.06487695749440715, z-value: 8.82, p-value 1.0000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000, relbase1 0.05892857142857143, relbase2 0.012946428571428572
+Rule id 54: Action rule : , p1=0.1336206896551724, p2=0.12444444444444444, z-value: 0.29, p-value 0.6150387970926678438132739756838418543338775634765625000000000000000000000000000000000000000000000000, relbase1 0.013839285714285714, relbase2 0.0125
+Rule id 55: Action rule : , p1=0.15945330296127563, p2=0.11936936936936937, z-value: 1.72, p-value 0.9572789672667072480294336855877190828323364257812500000000000000000000000000000000000000000000000000, relbase1 0.03125, relbase2 0.023660714285714285
+Rule id 56: Action rule : , p1=0.16099773242630386, p2=0.12018140589569161, z-value: 1.74, p-value 0.9593906443894727464893890100938733667135238647460937500000000000000000000000000000000000000000000000, relbase1 0.03169642857142857, relbase2 0.023660714285714285
+Rule id 57: Action rule : , p1=0.3225806451612903, p2=0.25, z-value: 1.09, p-value 0.8625251699282541206770247299573384225368499755859375000000000000000000000000000000000000000000000000, relbase1 0.013392857142857142, relbase2 0.010267857142857143
+Rule id 58: Action rule : , p1=0.19021739130434784, p2=0.13, z-value: 1.61, p-value 0.9465917977032164420947424332553055137395858764648437500000000000000000000000000000000000000000000000, relbase1 0.015625, relbase2 0.011607142857142858
+Rule id 59: Action rule : , p1=0.15777777777777777, p2=0.11777777777777777, z-value: 1.74, p-value 0.9591417960433076261850260380015242844820022583007812500000000000000000000000000000000000000000000000, relbase1 0.03169642857142857, relbase2 0.023660714285714285
+Rule id 60: Action rule : , p1=0.15777777777777777, p2=0.11777777777777777, z-value: 1.74, p-value 0.9591417960433076261850260380015242844820022583007812500000000000000000000000000000000000000000000000, relbase1 0.03169642857142857, relbase2 0.023660714285714285
+Rule id 61: Action rule : , p1=0.15777777777777777, p2=0.11777777777777777, z-value: 1.74, p-value 0.9591417960433076261850260380015242844820022583007812500000000000000000000000000000000000000000000000, relbase1 0.03169642857142857, relbase2 0.023660714285714285
+Rule id 62: Action rule : , p1=0.15777777777777777, p2=0.11777777777777777, z-value: 1.74, p-value 0.9591417960433076261850260380015242844820022583007812500000000000000000000000000000000000000000000000, relbase1 0.03169642857142857, relbase2 0.023660714285714285
+Rule id 63: Action rule : , p1=0.15777777777777777, p2=0.11777777777777777, z-value: 1.74, p-value 0.9591417960433076261850260380015242844820022583007812500000000000000000000000000000000000000000000000, relbase1 0.03169642857142857, relbase2 0.023660714285714285
+Rule id 64: Action rule : , p1=0.15777777777777777, p2=0.11777777777777777, z-value: 1.74, p-value 0.9591417960433076261850260380015242844820022583007812500000000000000000000000000000000000000000000000, relbase1 0.03169642857142857, relbase2 0.023660714285714285
+Rule id 65: Action rule : , p1=0.1336206896551724, p2=0.10822510822510822, z-value: 0.84, p-value 0.7989648176269035229069004344637505710124969482421875000000000000000000000000000000000000000000000000, relbase1 0.013839285714285714, relbase2 0.011160714285714286
+Rule id 66: Action rule : , p1=0.3372093023255814, p2=0.3076923076923077, z-value: 0.42, p-value 0.6627754129370443392232914447959046810865402221679687500000000000000000000000000000000000000000000000, relbase1 0.012946428571428572, relbase2 0.0125
+Rule id 67: Action rule : , p1=0.15945330296127563, p2=0.11475409836065574, z-value: 1.91, p-value 0.9719440915345569642624923289986327290534973144531250000000000000000000000000000000000000000000000000, relbase1 0.03125, relbase2 0.021875
+Rule id 68: Action rule : , p1=0.16099773242630386, p2=0.11267605633802817, z-value: 2.07, p-value 0.9806353618569692009998561843531206250190734863281250000000000000000000000000000000000000000000000000, relbase1 0.03169642857142857, relbase2 0.02142857142857143
+Rule id 69: Action rule : , p1=0.3225806451612903, p2=0.2826086956521739, z-value: 0.59, p-value 0.7229679301696405602228878706227988004684448242187500000000000000000000000000000000000000000000000000, relbase1 0.013392857142857142, relbase2 0.011607142857142858
+Rule id 70: Action rule : , p1=0.345679012345679, p2=0.24, z-value: 1.56, p-value 0.9408953925580890720326010523422155529260635375976562500000000000000000000000000000000000000000000000, relbase1 0.0125, relbase2 0.010714285714285714
+Rule id 71: Action rule : , p1=0.19021739130434784, p2=0.15865384615384615, z-value: 0.82, p-value 0.7949306230012066487589095231669489294290542602539062500000000000000000000000000000000000000000000000, relbase1 0.015625, relbase2 0.014732142857142857
+Rule id 72: Action rule : , p1=0.15777777777777777, p2=0.11212814645308924, z-value: 1.99, p-value 0.9765539804096575737801799732551444321870803833007812500000000000000000000000000000000000000000000000, relbase1 0.03169642857142857, relbase2 0.021875
+Rule id 73: Action rule : , p1=0.15777777777777777, p2=0.11212814645308924, z-value: 1.99, p-value 0.9765539804096575737801799732551444321870803833007812500000000000000000000000000000000000000000000000, relbase1 0.03169642857142857, relbase2 0.021875
+Rule id 74: Action rule : , p1=0.15777777777777777, p2=0.11212814645308924, z-value: 1.99, p-value 0.9765539804096575737801799732551444321870803833007812500000000000000000000000000000000000000000000000, relbase1 0.03169642857142857, relbase2 0.021875
+Rule id 75: Action rule : , p1=0.15777777777777777, p2=0.11212814645308924, z-value: 1.99, p-value 0.9765539804096575737801799732551444321870803833007812500000000000000000000000000000000000000000000000, relbase1 0.03169642857142857, relbase2 0.021875
+Rule id 76: Action rule : , p1=0.15777777777777777, p2=0.11212814645308924, z-value: 1.99, p-value 0.9765539804096575737801799732551444321870803833007812500000000000000000000000000000000000000000000000, relbase1 0.03169642857142857, relbase2 0.021875
+Rule id 77: Action rule : , p1=0.15777777777777777, p2=0.11212814645308924, z-value: 1.99, p-value 0.9765539804096575737801799732551444321870803833007812500000000000000000000000000000000000000000000000, relbase1 0.03169642857142857, relbase2 0.021875
+Rule id 78: Action rule : , p1=0.15945330296127563, p2=0.06682027649769585, z-value: 4.32, p-value 0.9999920489588935978986228292342275381088256835937500000000000000000000000000000000000000000000000000, relbase1 0.03125, relbase2 0.012946428571428572
+Rule id 79: Action rule : , p1=0.16099773242630386, p2=0.06264501160092807, z-value: 4.60, p-value 0.9999978617530842495142451298306696116924285888671875000000000000000000000000000000000000000000000000, relbase1 0.03169642857142857, relbase2 0.012053571428571429
+Rule id 80: Action rule : , p1=0.15777777777777777, p2=0.06487695749440715, z-value: 4.42, p-value 0.9999950706134138611602679702627938240766525268554687500000000000000000000000000000000000000000000000, relbase1 0.03169642857142857, relbase2 0.012946428571428572
+Rule id 81: Action rule : , p1=0.15777777777777777, p2=0.06487695749440715, z-value: 4.42, p-value 0.9999950706134138611602679702627938240766525268554687500000000000000000000000000000000000000000000000, relbase1 0.03169642857142857, relbase2 0.012946428571428572
+Rule id 82: Action rule : , p1=0.15777777777777777, p2=0.06487695749440715, z-value: 4.42, p-value 0.9999950706134138611602679702627938240766525268554687500000000000000000000000000000000000000000000000, relbase1 0.03169642857142857, relbase2 0.012946428571428572
+Rule id 83: Action rule : , p1=0.15777777777777777, p2=0.06487695749440715, z-value: 4.42, p-value 0.9999950706134138611602679702627938240766525268554687500000000000000000000000000000000000000000000000, relbase1 0.03169642857142857, relbase2 0.012946428571428572
+Rule id 84: Action rule : , p1=0.15777777777777777, p2=0.06487695749440715, z-value: 4.42, p-value 0.9999950706134138611602679702627938240766525268554687500000000000000000000000000000000000000000000000, relbase1 0.03169642857142857, relbase2 0.012946428571428572
+Rule id 85: Action rule : , p1=0.15777777777777777, p2=0.06487695749440715, z-value: 4.42, p-value 0.9999950706134138611602679702627938240766525268554687500000000000000000000000000000000000000000000000, relbase1 0.03169642857142857, relbase2 0.012946428571428572
+Rule id 86: Action rule : , p1=0.12444444444444444, p2=0.10822510822510822, z-value: 0.54, p-value 0.7054994828940744922007866080093663185834884643554687500000000000000000000000000000000000000000000000, relbase1 0.0125, relbase2 0.011160714285714286
+Rule id 87: Action rule : , p1=0.12018140589569161, p2=0.11267605633802817, z-value: 0.34, p-value 0.6347172239900412682445107748208101838827133178710937500000000000000000000000000000000000000000000000, relbase1 0.023660714285714285, relbase2 0.02142857142857143
+Rule id 88: Action rule : , p1=0.11777777777777777, p2=0.11212814645308924, z-value: 0.26, p-value 0.6039906737622169341506150885834358632564544677734375000000000000000000000000000000000000000000000000, relbase1 0.023660714285714285, relbase2 0.021875
+Rule id 89: Action rule : , p1=0.11777777777777777, p2=0.11212814645308924, z-value: 0.26, p-value 0.6039906737622169341506150885834358632564544677734375000000000000000000000000000000000000000000000000, relbase1 0.023660714285714285, relbase2 0.021875
+Rule id 90: Action rule : , p1=0.11777777777777777, p2=0.11212814645308924, z-value: 0.26, p-value 0.6039906737622169341506150885834358632564544677734375000000000000000000000000000000000000000000000000, relbase1 0.023660714285714285, relbase2 0.021875
+Rule id 91: Action rule : , p1=0.11777777777777777, p2=0.11212814645308924, z-value: 0.26, p-value 0.6039906737622169341506150885834358632564544677734375000000000000000000000000000000000000000000000000, relbase1 0.023660714285714285, relbase2 0.021875
+Rule id 92: Action rule : , p1=0.11777777777777777, p2=0.11212814645308924, z-value: 0.26, p-value 0.6039906737622169341506150885834358632564544677734375000000000000000000000000000000000000000000000000, relbase1 0.023660714285714285, relbase2 0.021875
+Rule id 93: Action rule : , p1=0.11777777777777777, p2=0.11212814645308924, z-value: 0.26, p-value 0.6039906737622169341506150885834358632564544677734375000000000000000000000000000000000000000000000000, relbase1 0.023660714285714285, relbase2 0.021875
+Rule id 94: Action rule : , p1=0.11936936936936937, p2=0.06682027649769585, z-value: 2.68, p-value 0.9962677632922697368300646303396206349134445190429687500000000000000000000000000000000000000000000000, relbase1 0.023660714285714285, relbase2 0.012946428571428572
+Rule id 95: Action rule : , p1=0.12018140589569161, p2=0.06264501160092807, z-value: 2.94, p-value 0.9983733688455026511476830819447059184312820434570312500000000000000000000000000000000000000000000000, relbase1 0.023660714285714285, relbase2 0.012053571428571429
+Rule id 96: Action rule : , p1=0.11777777777777777, p2=0.06487695749440715, z-value: 2.75, p-value 0.9970087158799346704896038318111095577478408813476562500000000000000000000000000000000000000000000000, relbase1 0.023660714285714285, relbase2 0.012946428571428572
+Rule id 97: Action rule : , p1=0.11777777777777777, p2=0.06487695749440715, z-value: 2.75, p-value 0.9970087158799346704896038318111095577478408813476562500000000000000000000000000000000000000000000000, relbase1 0.023660714285714285, relbase2 0.012946428571428572
+Rule id 98: Action rule : , p1=0.11777777777777777, p2=0.06487695749440715, z-value: 2.75, p-value 0.9970087158799346704896038318111095577478408813476562500000000000000000000000000000000000000000000000, relbase1 0.023660714285714285, relbase2 0.012946428571428572
+Rule id 99: Action rule : , p1=0.11777777777777777, p2=0.06487695749440715, z-value: 2.75, p-value 0.9970087158799346704896038318111095577478408813476562500000000000000000000000000000000000000000000000, relbase1 0.023660714285714285, relbase2 0.012946428571428572
+Rule id 100: Action rule : , p1=0.11777777777777777, p2=0.06487695749440715, z-value: 2.75, p-value 0.9970087158799346704896038318111095577478408813476562500000000000000000000000000000000000000000000000, relbase1 0.023660714285714285, relbase2 0.012946428571428572
+Rule id 101: Action rule : , p1=0.11777777777777777, p2=0.06487695749440715, z-value: 2.75, p-value 0.9970087158799346704896038318111095577478408813476562500000000000000000000000000000000000000000000000, relbase1 0.023660714285714285, relbase2 0.012946428571428572
+Rule id 102: Action rule : , p1=0.2826086956521739, p2=0.25, z-value: 0.50, p-value 0.6915821605038707797774577556992881000041961669921875000000000000000000000000000000000000000000000000, relbase1 0.011607142857142858, relbase2 0.010267857142857143
+Rule id 103: Action rule : , p1=0.15865384615384615, p2=0.13, z-value: 0.82, p-value 0.7946496236335098828362788481172174215316772460937500000000000000000000000000000000000000000000000000, relbase1 0.014732142857142857, relbase2 0.011607142857142858
+Rule id 104: Action rule : , p1=0.11475409836065574, p2=0.06682027649769585, z-value: 2.45, p-value 0.9928581033881977990773748388164676725864410400390625000000000000000000000000000000000000000000000000, relbase1 0.021875, relbase2 0.012946428571428572
+Rule id 105: Action rule : , p1=0.11267605633802817, p2=0.06264501160092807, z-value: 2.59, p-value 0.9952210947684180242234219804231543093919754028320312500000000000000000000000000000000000000000000000, relbase1 0.02142857142857143, relbase2 0.012053571428571429
+Rule id 106: Action rule : , p1=0.11212814645308924, p2=0.06487695749440715, z-value: 2.48, p-value 0.9933640201537045077984089402889367192983627319335937500000000000000000000000000000000000000000000000, relbase1 0.021875, relbase2 0.012946428571428572
+Rule id 107: Action rule : , p1=0.11212814645308924, p2=0.06487695749440715, z-value: 2.48, p-value 0.9933640201537045077984089402889367192983627319335937500000000000000000000000000000000000000000000000, relbase1 0.021875, relbase2 0.012946428571428572
+Rule id 108: Action rule : , p1=0.11212814645308924, p2=0.06487695749440715, z-value: 2.48, p-value 0.9933640201537045077984089402889367192983627319335937500000000000000000000000000000000000000000000000, relbase1 0.021875, relbase2 0.012946428571428572
+Rule id 109: Action rule : , p1=0.11212814645308924, p2=0.06487695749440715, z-value: 2.48, p-value 0.9933640201537045077984089402889367192983627319335937500000000000000000000000000000000000000000000000, relbase1 0.021875, relbase2 0.012946428571428572
+Rule id 110: Action rule : , p1=0.11212814645308924, p2=0.06487695749440715, z-value: 2.48, p-value 0.9933640201537045077984089402889367192983627319335937500000000000000000000000000000000000000000000000, relbase1 0.021875, relbase2 0.012946428571428572
+Rule id 111: Action rule : , p1=0.11212814645308924, p2=0.06487695749440715, z-value: 2.48, p-value 0.9933640201537045077984089402889367192983627319335937500000000000000000000000000000000000000000000000, relbase1 0.021875, relbase2 0.012946428571428572
+Total rules:111, out of them action rules:111, for relative base criteria filtered out 0, resulting rules 111
+[{'id': 53, 'rule_id': 53, 'z_score': 8.815939272644204}, {'id': 52, 'rule_id': 52, 'z_score': 8.815939272644204}, {'id': 51, 'rule_id': 51, 'z_score': 8.815939272644204}, {'id': 50, 'rule_id': 50, 'z_score': 8.815939272644204}, {'id': 49, 'rule_id': 49, 'z_score': 8.815939272644204}, {'id': 48, 'rule_id': 48, 'z_score': 8.815939272644204}, {'id': 47, 'rule_id': 47, 'z_score': 8.788086440881495}, {'id': 46, 'rule_id': 46, 'z_score': 8.691810741197719}, {'id': 45, 'rule_id': 45, 'z_score': 6.590067311616202}, {'id': 44, 'rule_id': 44, 'z_score': 6.590067311616202}, {'id': 43, 'rule_id': 43, 'z_score': 6.590067311616202}, {'id': 42, 'rule_id': 42, 'z_score': 6.590067311616202}, {'id': 41, 'rule_id': 41, 'z_score': 6.590067311616202}, {'id': 40, 'rule_id': 40, 'z_score': 6.590067311616202}, {'id': 34, 'rule_id': 34, 'z_score': 6.498448797680178}, {'id': 35, 'rule_id': 35, 'z_score': 6.495700435353975}, {'id': 31, 'rule_id': 31, 'z_score': 6.4100175909249915}, {'id': 30, 'rule_id': 30, 'z_score': 6.4100175909249915}, {'id': 29, 'rule_id': 29, 'z_score': 6.4100175909249915}, {'id': 28, 'rule_id': 28, 'z_score': 6.4100175909249915}, {'id': 27, 'rule_id': 27, 'z_score': 6.4100175909249915}, {'id': 26, 'rule_id': 26, 'z_score': 6.4100175909249915}, {'id': 22, 'rule_id': 22, 'z_score': 6.386122731720854}, {'id': 23, 'rule_id': 23, 'z_score': 6.250139277949616}, {'id': 32, 'rule_id': 32, 'z_score': 4.849530326195989}, {'id': 20, 'rule_id': 20, 'z_score': 4.753345379176669}, {'id': 19, 'rule_id': 19, 'z_score': 4.753345379176669}, {'id': 18, 'rule_id': 18, 'z_score': 4.753345379176669}, {'id': 17, 'rule_id': 17, 'z_score': 4.753345379176669}, {'id': 16, 'rule_id': 16, 'z_score': 4.753345379176669}, {'id': 15, 'rule_id': 15, 'z_score': 4.753345379176669}, {'id': 5, 'rule_id': 5, 'z_score': 4.729176700965467}, {'id': 79, 'rule_id': 79, 'z_score': 4.597471363619018}, {'id': 6, 'rule_id': 6, 'z_score': 4.585109896712183}, {'id': 25, 'rule_id': 25, 'z_score': 4.456688204712614}, {'id': 85, 'rule_id': 85, 'z_score': 4.420247914957389}, {'id': 84, 'rule_id': 84, 'z_score': 4.420247914957389}, {'id': 83, 'rule_id': 83, 'z_score': 4.420247914957389}, {'id': 82, 'rule_id': 82, 'z_score': 4.420247914957389}, {'id': 81, 'rule_id': 81, 'z_score': 4.420247914957389}, {'id': 80, 'rule_id': 80, 'z_score': 4.420247914957389}, {'id': 78, 'rule_id': 78, 'z_score': 4.315807073097875}, {'id': 21, 'rule_id': 21, 'z_score': 4.313943210166559}, {'id': 1, 'rule_id': 1, 'z_score': 4.08102091604719}, {'id': 37, 'rule_id': 37, 'z_score': 3.8032179335705814}, {'id': 39, 'rule_id': 39, 'z_score': 3.722540374596169}, {'id': 95, 'rule_id': 95, 'z_score': 2.9427355100181654}, {'id': 12, 'rule_id': 12, 'z_score': 2.7844160208426434}, {'id': 101, 'rule_id': 101, 'z_score': 2.7487352740037627}, {'id': 100, 'rule_id': 100, 'z_score': 2.7487352740037627}, {'id': 99, 'rule_id': 99, 'z_score': 2.7487352740037627}, {'id': 98, 'rule_id': 98, 'z_score': 2.7487352740037627}, {'id': 97, 'rule_id': 97, 'z_score': 2.7487352740037627}, {'id': 96, 'rule_id': 96, 'z_score': 2.7487352740037627}, {'id': 94, 'rule_id': 94, 'z_score': 2.675379353074607}, {'id': 24, 'rule_id': 24, 'z_score': 2.658245261453818}, {'id': 105, 'rule_id': 105, 'z_score': 2.5914295647896264}, {'id': 111, 'rule_id': 111, 'z_score': 2.476387089817756}, {'id': 110, 'rule_id': 110, 'z_score': 2.476387089817756}, {'id': 109, 'rule_id': 109, 'z_score': 2.476387089817756}, {'id': 108, 'rule_id': 108, 'z_score': 2.476387089817756}, {'id': 107, 'rule_id': 107, 'z_score': 2.476387089817756}, {'id': 106, 'rule_id': 106, 'z_score': 2.476387089817756}, {'id': 104, 'rule_id': 104, 'z_score': 2.450046083517836}, {'id': 10, 'rule_id': 10, 'z_score': 2.2045292820265856}, {'id': 36, 'rule_id': 36, 'z_score': 2.183372752553823}, {'id': 9, 'rule_id': 9, 'z_score': 2.1130871576642636}, {'id': 68, 'rule_id': 68, 'z_score': 2.06705176722861}, {'id': 33, 'rule_id': 33, 'z_score': 2.0104467921423637}, {'id': 77, 'rule_id': 77, 'z_score': 1.9872740189146234}, {'id': 76, 'rule_id': 76, 'z_score': 1.9872740189146234}, {'id': 75, 'rule_id': 75, 'z_score': 1.9872740189146234}, {'id': 74, 'rule_id': 74, 'z_score': 1.9872740189146234}, {'id': 73, 'rule_id': 73, 'z_score': 1.9872740189146234}, {'id': 72, 'rule_id': 72, 'z_score': 1.9872740189146234}, {'id': 67, 'rule_id': 67, 'z_score': 1.9101662050442425}, {'id': 56, 'rule_id': 56, 'z_score': 1.7436581829738977}, {'id': 64, 'rule_id': 64, 'z_score': 1.740812740935201}, {'id': 63, 'rule_id': 63, 'z_score': 1.740812740935201}, {'id': 62, 'rule_id': 62, 'z_score': 1.740812740935201}, {'id': 61, 'rule_id': 61, 'z_score': 1.740812740935201}, {'id': 60, 'rule_id': 60, 'z_score': 1.740812740935201}, {'id': 59, 'rule_id': 59, 'z_score': 1.740812740935201}, {'id': 55, 'rule_id': 55, 'z_score': 1.7199470581712153}, {'id': 2, 'rule_id': 2, 'z_score': 1.6337882323870045}, {'id': 7, 'rule_id': 7, 'z_score': 1.6236929577276848}, {'id': 58, 'rule_id': 58, 'z_score': 1.612669158020586}, {'id': 14, 'rule_id': 14, 'z_score': 1.5880308032871484}, {'id': 4, 'rule_id': 4, 'z_score': 1.5632047194695091}, {'id': 70, 'rule_id': 70, 'z_score': 1.5623344733689772}, {'id': 38, 'rule_id': 38, 'z_score': 1.453652300100062}, {'id': 13, 'rule_id': 13, 'z_score': 1.4486574896293842}, {'id': 3, 'rule_id': 3, 'z_score': 1.4373077798949672}, {'id': 8, 'rule_id': 8, 'z_score': 1.3403068563483245}, {'id': 11, 'rule_id': 11, 'z_score': 1.2232483064205408}, {'id': 57, 'rule_id': 57, 'z_score': 1.0917348552603}, {'id': 65, 'rule_id': 65, 'z_score': 0.837929383887302}, {'id': 71, 'rule_id': 71, 'z_score': 0.8236494776740906}, {'id': 103, 'rule_id': 103, 'z_score': 0.8226610818266995}, {'id': 69, 'rule_id': 69, 'z_score': 0.591681122853257}, {'id': 86, 'rule_id': 86, 'z_score': 0.5402842271327394}, {'id': 102, 'rule_id': 102, 'z_score': 0.5003400204405215}, {'id': 66, 'rule_id': 66, 'z_score': 0.4200496628203343}, {'id': 87, 'rule_id': 87, 'z_score': 0.3443733183136769}, {'id': 54, 'rule_id': 54, 'z_score': 0.2924763943416325}, {'id': 93, 'rule_id': 93, 'z_score': 0.2636901936946089}, {'id': 92, 'rule_id': 92, 'z_score': 0.2636901936946089}, {'id': 91, 'rule_id': 91, 'z_score': 0.2636901936946089}, {'id': 90, 'rule_id': 90, 'z_score': 0.2636901936946089}, {'id': 89, 'rule_id': 89, 'z_score': 0.2636901936946089}, {'id': 88, 'rule_id': 88, 'z_score': 0.2636901936946089}]
+RULE 1: z-score 8.82, rule text:   Complain((-0.001, 1.0]) => Response(1) | --- : Recency((-0.001, 19.0]) x Recency((79.0, 99.0])
+RULE 2: z-score 8.82, rule text:   AcceptedCmp2((-0.001, 1.0]) => Response(1) | --- : Recency((-0.001, 19.0]) x Recency((79.0, 99.0])
+RULE 3: z-score 8.82, rule text:   AcceptedCmp1((-0.001, 1.0]) => Response(1) | --- : Recency((-0.001, 19.0]) x Recency((79.0, 99.0])
+RULE 4: z-score 8.82, rule text:   AcceptedCmp5((-0.001, 1.0]) => Response(1) | --- : Recency((-0.001, 19.0]) x Recency((79.0, 99.0])
+RULE 5: z-score 8.82, rule text:   AcceptedCmp4((-0.001, 1.0]) => Response(1) | --- : Recency((-0.001, 19.0]) x Recency((79.0, 99.0])
+RULE 6: z-score 8.82, rule text:   AcceptedCmp3((-0.001, 1.0]) => Response(1) | --- : Recency((-0.001, 19.0]) x Recency((79.0, 99.0])
+RULE 7: z-score 8.79, rule text:   Teenhome((-0.001, 1.0]) => Response(1) | --- : Recency((-0.001, 19.0]) x Recency((79.0, 99.0])
+RULE 8: z-score 8.69, rule text:   Kidhome((-0.001, 1.0]) => Response(1) | --- : Recency((-0.001, 19.0]) x Recency((79.0, 99.0])
+RULE 9: z-score 6.59, rule text:   Complain((-0.001, 1.0]) => Response(1) | --- : Recency((-0.001, 19.0]) x Recency((59.0, 79.0])
+RULE 10: z-score 6.59, rule text:   AcceptedCmp2((-0.001, 1.0]) => Response(1) | --- : Recency((-0.001, 19.0]) x Recency((59.0, 79.0])
+RULE 11: z-score 6.59, rule text:   AcceptedCmp1((-0.001, 1.0]) => Response(1) | --- : Recency((-0.001, 19.0]) x Recency((59.0, 79.0])
+RULE 12: z-score 6.59, rule text:   AcceptedCmp5((-0.001, 1.0]) => Response(1) | --- : Recency((-0.001, 19.0]) x Recency((59.0, 79.0])
+RULE 13: z-score 6.59, rule text:   AcceptedCmp4((-0.001, 1.0]) => Response(1) | --- : Recency((-0.001, 19.0]) x Recency((59.0, 79.0])
+RULE 14: z-score 6.59, rule text:   AcceptedCmp3((-0.001, 1.0]) => Response(1) | --- : Recency((-0.001, 19.0]) x Recency((59.0, 79.0])
+RULE 15: z-score 6.50, rule text:   Kidhome((-0.001, 1.0]) => Response(1) | --- : Recency((-0.001, 19.0]) x Recency((59.0, 79.0])
+RULE 16: z-score 6.50, rule text:   Teenhome((-0.001, 1.0]) => Response(1) | --- : Recency((-0.001, 19.0]) x Recency((59.0, 79.0])
+RULE 17: z-score 6.41, rule text:   Complain((-0.001, 1.0]) => Response(1) | --- : Recency((-0.001, 19.0]) x Recency((39.0, 59.0])
+RULE 18: z-score 6.41, rule text:   AcceptedCmp2((-0.001, 1.0]) => Response(1) | --- : Recency((-0.001, 19.0]) x Recency((39.0, 59.0])
+RULE 19: z-score 6.41, rule text:   AcceptedCmp1((-0.001, 1.0]) => Response(1) | --- : Recency((-0.001, 19.0]) x Recency((39.0, 59.0])
+RULE 20: z-score 6.41, rule text:   AcceptedCmp5((-0.001, 1.0]) => Response(1) | --- : Recency((-0.001, 19.0]) x Recency((39.0, 59.0])
+RULE 21: z-score 6.41, rule text:   AcceptedCmp4((-0.001, 1.0]) => Response(1) | --- : Recency((-0.001, 19.0]) x Recency((39.0, 59.0])
+RULE 22: z-score 6.41, rule text:   AcceptedCmp3((-0.001, 1.0]) => Response(1) | --- : Recency((-0.001, 19.0]) x Recency((39.0, 59.0])
+RULE 23: z-score 6.39, rule text:   Kidhome((-0.001, 1.0]) => Response(1) | --- : Recency((-0.001, 19.0]) x Recency((39.0, 59.0])
+RULE 24: z-score 6.25, rule text:   Teenhome((-0.001, 1.0]) => Response(1) | --- : Recency((-0.001, 19.0]) x Recency((39.0, 59.0])
+RULE 25: z-score 4.85, rule text:   Education(Graduation) => Response(1) | --- : Recency((-0.001, 19.0]) x Recency((59.0, 79.0])
+RULE 26: z-score 4.75, rule text:   Complain((-0.001, 1.0]) => Response(1) | --- : Recency((-0.001, 19.0]) x Recency((19.0, 39.0])
+RULE 27: z-score 4.75, rule text:   AcceptedCmp2((-0.001, 1.0]) => Response(1) | --- : Recency((-0.001, 19.0]) x Recency((19.0, 39.0])
+RULE 28: z-score 4.75, rule text:   AcceptedCmp1((-0.001, 1.0]) => Response(1) | --- : Recency((-0.001, 19.0]) x Recency((19.0, 39.0])
+RULE 29: z-score 4.75, rule text:   AcceptedCmp5((-0.001, 1.0]) => Response(1) | --- : Recency((-0.001, 19.0]) x Recency((19.0, 39.0])
+RULE 30: z-score 4.75, rule text:   AcceptedCmp4((-0.001, 1.0]) => Response(1) | --- : Recency((-0.001, 19.0]) x Recency((19.0, 39.0])
+<class 'float'>
+...will go for dataset svmtrain.zip, target Survived, target_class 1, split_class Fare, ignore_vars nan, i.e. []
+......will go for column Survived out of Index(['Survived', 'Pclass', 'Sex', 'Age', 'SibSp', 'Parch', 'Fare',
+       'Embarked'],
+      dtype='object')
+[0 1]
+...ante is [{'name': 'Pclass', 'type': 'subset', 'minlen': 1, 'maxlen': 1}, {'name': 'Sex', 'type': 'subset', 'minlen': 1, 'maxlen': 1}, {'name': 'Age', 'type': 'subset', 'minlen': 1, 'maxlen': 1}, {'name': 'SibSp', 'type': 'subset', 'minlen': 1, 'maxlen': 1}, {'name': 'Parch', 'type': 'subset', 'minlen': 1, 'maxlen': 1}, {'name': 'Embarked', 'type': 'subset', 'minlen': 1, 'maxlen': 1}]
+Cleverminer version 1.0.11.
+Warning: Python 3.10+ NOT detected. You should upgrade to Python 3.10 or greater to get better performance
+Starting data preparation ...
+Automatically reordering numeric categories ...
+Encoding columns into bit-form...
+Encoding columns into bit-form...done
+Data preparation finished.
+Will go for  SD4ftMiner
+Starting to mine rules.
+  0%|                                                    |Elapsed Time: 0:00:00
+100%|####################################################|Elapsed Time: 0:00:00
+Done. Total verifications : 450, rules 92, times: prep 0.02sec, processing 0.05sec
+
+List of rules:
+RULEID BASE1 BASE2 RatioConf DeltaConf Rule
+     1    39    28    1.334    +0.059  Pclass(3) => Survived(1) | --- : Fare((-0.001, 7.854]) x Fare((7.854, 10.5])
+     2    26    19    1.296    +0.156  Sex(female) => Survived(1) | --- : Fare((-0.001, 7.854]) x Fare((7.854, 10.5])
+     3    16     9    1.260    +0.042  Age((38.0, 60.0]) => Survived(1) | --- : Fare((-0.001, 7.854]) x Fare((7.854, 10.5])
+     4    37    35    1.101    +0.020  SibSp(0) => Survived(1) | --- : Fare((-0.001, 7.854]) x Fare((7.854, 10.5])
+     5    39    34    1.167    +0.032  Parch(0) => Survived(1) | --- : Fare((-0.001, 7.854]) x Fare((7.854, 10.5])
+     6    39     9    1.375    +0.064  Pclass(3) => Survived(1) | --- : Fare((-0.001, 7.854]) x Fare((21.075, 39.688])
+     7    18    13    1.319    +0.029  Sex(Male) => Survived(1) | --- : Fare((7.854, 10.5]) x Fare((-0.001, 7.854])
+     8    30    16    1.143    +0.022  Embarked(3) => Survived(1) | --- : Fare((7.854, 10.5]) x Fare((-0.001, 7.854])
+     9    38    39    1.788    +0.184  Pclass(3) => Survived(1) | --- : Fare((10.5, 21.075]) x Fare((-0.001, 7.854])
+    10    19    13    2.192    +0.110  Sex(Male) => Survived(1) | --- : Fare((10.5, 21.075]) x Fare((-0.001, 7.854])
+    11    14    14    1.125    +0.039  Age((20.0, 28.0]) => Survived(1) | --- : Fare((10.5, 21.075]) x Fare((-0.001, 7.854])
+    12    17    16    1.679    +0.137  Age((38.0, 60.0]) => Survived(1) | --- : Fare((10.5, 21.075]) x Fare((-0.001, 7.854])
+    13    42    37    1.915    +0.203  SibSp(0) => Survived(1) | --- : Fare((10.5, 21.075]) x Fare((-0.001, 7.854])
+    14    41    39    1.546    +0.122  Parch(0) => Survived(1) | --- : Fare((10.5, 21.075]) x Fare((-0.001, 7.854])
+    15    50    16    2.534    +0.238  Embarked(3) => Survived(1) | --- : Fare((10.5, 21.075]) x Fare((-0.001, 7.854])
+    16    35     9    1.167    +0.062  Pclass(2) => Survived(1) | --- : Fare((10.5, 21.075]) x Fare((7.854, 10.5])
+    17    38    28    2.386    +0.243  Pclass(3) => Survived(1) | --- : Fare((10.5, 21.075]) x Fare((7.854, 10.5])
+    18    19    18    1.662    +0.081  Sex(Male) => Survived(1) | --- : Fare((10.5, 21.075]) x Fare((7.854, 10.5])
+    19    54    19    1.329    +0.174  Sex(female) => Survived(1) | --- : Fare((10.5, 21.075]) x Fare((7.854, 10.5])
+    20    25    12    1.744    +0.248  Age((0.419, 20.0]) => Survived(1) | --- : Fare((10.5, 21.075]) x Fare((7.854, 10.5])
+    21    17     9    2.137    +0.238  Age((28.0, 38.0]) => Survived(1) | --- : Fare((10.5, 21.075]) x Fare((7.854, 10.5])
+    22    17     9    2.116    +0.179  Age((38.0, 60.0]) => Survived(1) | --- : Fare((10.5, 21.075]) x Fare((7.854, 10.5])
+    23    42    35    2.109    +0.223  SibSp(0) => Survived(1) | --- : Fare((10.5, 21.075]) x Fare((7.854, 10.5])
+    24    41    34    1.804    +0.154  Parch(0) => Survived(1) | --- : Fare((10.5, 21.075]) x Fare((7.854, 10.5])
+    25    50    30    2.218    +0.216  Embarked(3) => Survived(1) | --- : Fare((10.5, 21.075]) x Fare((7.854, 10.5])
+    26    38     9    2.459    +0.248  Pclass(3) => Survived(1) | --- : Fare((10.5, 21.075]) x Fare((21.075, 39.688])
+    27    25    23    1.188    +0.092  Age((0.419, 20.0]) => Survived(1) | --- : Fare((10.5, 21.075]) x Fare((21.075, 39.688])
+    28    22    21    1.246    +0.117  Parch(1) => Survived(1) | --- : Fare((10.5, 21.075]) x Fare((21.075, 39.688])
+    29    18    14    1.169    +0.079  Embarked(1) => Survived(1) | --- : Fare((10.5, 21.075]) x Fare((21.075, 39.688])
+    30    32    13    3.127    +0.196  Sex(Male) => Survived(1) | --- : Fare((21.075, 39.688]) x Fare((-0.001, 7.854])
+    31    11    14    1.964    +0.300  Age((20.0, 28.0]) => Survived(1) | --- : Fare((21.075, 39.688]) x Fare((-0.001, 7.854])
+    32    28    16    1.819    +0.166  Age((38.0, 60.0]) => Survived(1) | --- : Fare((21.075, 39.688]) x Fare((-0.001, 7.854])
+    33    45    37    2.232    +0.273  SibSp(0) => Survived(1) | --- : Fare((21.075, 39.688]) x Fare((-0.001, 7.854])
+    34    45    39    2.060    +0.236  Parch(0) => Survived(1) | --- : Fare((21.075, 39.688]) x Fare((-0.001, 7.854])
+    35    63    16    2.876    +0.291  Embarked(3) => Survived(1) | --- : Fare((21.075, 39.688]) x Fare((-0.001, 7.854])
+    36    39     9    1.625    +0.234  Pclass(2) => Survived(1) | --- : Fare((21.075, 39.688]) x Fare((7.854, 10.5])
+    37    32    18    2.370    +0.167  Sex(Male) => Survived(1) | --- : Fare((21.075, 39.688]) x Fare((7.854, 10.5])
+    38    48    19    1.299    +0.158  Sex(female) => Survived(1) | --- : Fare((21.075, 39.688]) x Fare((7.854, 10.5])
+    39    23    12    1.468    +0.156  Age((0.419, 20.0]) => Survived(1) | --- : Fare((21.075, 39.688]) x Fare((7.854, 10.5])
+    40    17     9    2.538    +0.322  Age((28.0, 38.0]) => Survived(1) | --- : Fare((21.075, 39.688]) x Fare((7.854, 10.5])
+    41    28     9    2.292    +0.208  Age((38.0, 60.0]) => Survived(1) | --- : Fare((21.075, 39.688]) x Fare((7.854, 10.5])
+    42    45    35    2.458    +0.293  SibSp(0) => Survived(1) | --- : Fare((21.075, 39.688]) x Fare((7.854, 10.5])
+    43    45    34    2.404    +0.268  Parch(0) => Survived(1) | --- : Fare((21.075, 39.688]) x Fare((7.854, 10.5])
+    44    63    30    2.517    +0.269  Embarked(3) => Survived(1) | --- : Fare((21.075, 39.688]) x Fare((7.854, 10.5])
+    45    39    35    1.393    +0.172  Pclass(2) => Survived(1) | --- : Fare((21.075, 39.688]) x Fare((10.5, 21.075])
+    46    32    19    1.426    +0.086  Sex(Male) => Survived(1) | --- : Fare((21.075, 39.688]) x Fare((10.5, 21.075])
+    47    11    14    1.746    +0.261  Age((20.0, 28.0]) => Survived(1) | --- : Fare((21.075, 39.688]) x Fare((10.5, 21.075])
+    48    17    17    1.188    +0.084  Age((28.0, 38.0]) => Survived(1) | --- : Fare((21.075, 39.688]) x Fare((10.5, 21.075])
+    49    28    17    1.084    +0.028  Age((38.0, 60.0]) => Survived(1) | --- : Fare((21.075, 39.688]) x Fare((10.5, 21.075])
+    50    45    42    1.166    +0.070  SibSp(0) => Survived(1) | --- : Fare((21.075, 39.688]) x Fare((10.5, 21.075])
+    51    28    25    1.180    +0.076  SibSp(1) => Survived(1) | --- : Fare((21.075, 39.688]) x Fare((10.5, 21.075])
+    52    45    41    1.333    +0.115  Parch(0) => Survived(1) | --- : Fare((21.075, 39.688]) x Fare((10.5, 21.075])
+    53    63    50    1.135    +0.053  Embarked(3) => Survived(1) | --- : Fare((21.075, 39.688]) x Fare((10.5, 21.075])
+    54    27    13    3.528    +0.233  Sex(Male) => Survived(1) | --- : Fare((39.688, 512.329]) x Fare((-0.001, 7.854])
+    55    84    26    1.349    +0.239  Sex(female) => Survived(1) | --- : Fare((39.688, 512.329]) x Fare((-0.001, 7.854])
+    56    22    14    2.020    +0.317  Age((20.0, 28.0]) => Survived(1) | --- : Fare((39.688, 512.329]) x Fare((-0.001, 7.854])
+    57    43    16    2.990    +0.403  Age((38.0, 60.0]) => Survived(1) | --- : Fare((39.688, 512.329]) x Fare((-0.001, 7.854])
+    58    49    37    2.949    +0.432  SibSp(0) => Survived(1) | --- : Fare((39.688, 512.329]) x Fare((-0.001, 7.854])
+    59    72    39    3.048    +0.456  Parch(0) => Survived(1) | --- : Fare((39.688, 512.329]) x Fare((-0.001, 7.854])
+    60    58    16    3.590    +0.402  Embarked(3) => Survived(1) | --- : Fare((39.688, 512.329]) x Fare((-0.001, 7.854])
+    61    27    18    2.675    +0.204  Sex(Male) => Survived(1) | --- : Fare((39.688, 512.329]) x Fare((7.854, 10.5])
+    62    84    19    1.749    +0.395  Sex(female) => Survived(1) | --- : Fare((39.688, 512.329]) x Fare((7.854, 10.5])
+    63    15    12    1.800    +0.267  Age((0.419, 20.0]) => Survived(1) | --- : Fare((39.688, 512.329]) x Fare((7.854, 10.5])
+    64    30     9    3.772    +0.580  Age((28.0, 38.0]) => Survived(1) | --- : Fare((39.688, 512.329]) x Fare((7.854, 10.5])
+    65    43     9    3.768    +0.445  Age((38.0, 60.0]) => Survived(1) | --- : Fare((39.688, 512.329]) x Fare((7.854, 10.5])
+    66    49    35    3.248    +0.452  SibSp(0) => Survived(1) | --- : Fare((39.688, 512.329]) x Fare((7.854, 10.5])
+    67    72    34    3.556    +0.488  Parch(0) => Survived(1) | --- : Fare((39.688, 512.329]) x Fare((7.854, 10.5])
+    68    58    30    3.142    +0.380  Embarked(3) => Survived(1) | --- : Fare((39.688, 512.329]) x Fare((7.854, 10.5])
+    69    27    19    1.609    +0.123  Sex(Male) => Survived(1) | --- : Fare((39.688, 512.329]) x Fare((10.5, 21.075])
+    70    84    54    1.316    +0.222  Sex(female) => Survived(1) | --- : Fare((39.688, 512.329]) x Fare((10.5, 21.075])
+    71    22    14    1.796    +0.279  Age((20.0, 28.0]) => Survived(1) | --- : Fare((39.688, 512.329]) x Fare((10.5, 21.075])
+    72    30    17    1.765    +0.342  Age((28.0, 38.0]) => Survived(1) | --- : Fare((39.688, 512.329]) x Fare((10.5, 21.075])
+    73    43    17    1.781    +0.266  Age((38.0, 60.0]) => Survived(1) | --- : Fare((39.688, 512.329]) x Fare((10.5, 21.075])
+    74    49    42    1.540    +0.229  SibSp(0) => Survived(1) | --- : Fare((39.688, 512.329]) x Fare((10.5, 21.075])
+    75    56    25    1.739    +0.313  SibSp(1) => Survived(1) | --- : Fare((39.688, 512.329]) x Fare((10.5, 21.075])
+    76    72    41    1.971    +0.335  Parch(0) => Survived(1) | --- : Fare((39.688, 512.329]) x Fare((10.5, 21.075])
+    77    20    22    1.160    +0.095  Parch(1) => Survived(1) | --- : Fare((39.688, 512.329]) x Fare((10.5, 21.075])
+    78    52    18    1.402    +0.219  Embarked(1) => Survived(1) | --- : Fare((39.688, 512.329]) x Fare((10.5, 21.075])
+    79    58    50    1.417    +0.164  Embarked(3) => Survived(1) | --- : Fare((39.688, 512.329]) x Fare((10.5, 21.075])
+    80   102    32    1.417    +0.208  Pclass(1) => Survived(1) | --- : Fare((39.688, 512.329]) x Fare((21.075, 39.688])
+    81    27    32    1.128    +0.037  Sex(Male) => Survived(1) | --- : Fare((39.688, 512.329]) x Fare((21.075, 39.688])
+    82    84    48    1.346    +0.237  Sex(female) => Survived(1) | --- : Fare((39.688, 512.329]) x Fare((21.075, 39.688])
+    83    15    23    1.226    +0.111  Age((0.419, 20.0]) => Survived(1) | --- : Fare((39.688, 512.329]) x Fare((21.075, 39.688])
+    84    30    17    1.486    +0.258  Age((28.0, 38.0]) => Survived(1) | --- : Fare((39.688, 512.329]) x Fare((21.075, 39.688])
+    85    43    28    1.644    +0.237  Age((38.0, 60.0]) => Survived(1) | --- : Fare((39.688, 512.329]) x Fare((21.075, 39.688])
+    86    49    45    1.321    +0.159  SibSp(0) => Survived(1) | --- : Fare((39.688, 512.329]) x Fare((21.075, 39.688])
+    87    56    28    1.474    +0.237  SibSp(1) => Survived(1) | --- : Fare((39.688, 512.329]) x Fare((21.075, 39.688])
+    88    72    45    1.479    +0.220  Parch(0) => Survived(1) | --- : Fare((39.688, 512.329]) x Fare((21.075, 39.688])
+    89    20    21    1.445    +0.212  Parch(1) => Survived(1) | --- : Fare((39.688, 512.329]) x Fare((21.075, 39.688])
+    90    19    12    1.241    +0.100  Parch(2) => Survived(1) | --- : Fare((39.688, 512.329]) x Fare((21.075, 39.688])
+    91    52    14    1.639    +0.298  Embarked(1) => Survived(1) | --- : Fare((39.688, 512.329]) x Fare((21.075, 39.688])
+    92    58    63    1.248    +0.111  Embarked(3) => Survived(1) | --- : Fare((39.688, 512.329]) x Fare((21.075, 39.688])
+
+Rule id 1: Action rule : , p1=0.23353293413173654, p2=0.175, z-value: 1.31, p-value 0.9050535918813720215325702156405895948410034179687500000000000000000000000000000000000000000000000000, relbase1 0.043869516310461196, relbase2 0.031496062992125984
+Rule id 2: Action rule : , p1=0.6842105263157895, p2=0.5277777777777778, z-value: 1.38, p-value 0.9158651001792552648339551524259150028228759765625000000000000000000000000000000000000000000000000000, relbase1 0.02924634420697413, relbase2 0.021372328458942633
+Rule id 3: Action rule : , p1=0.20253164556962025, p2=0.16071428571428573, z-value: 0.62, p-value 0.7311388732629082731762082403292879462242126464843750000000000000000000000000000000000000000000000000, relbase1 0.01799775028121485, relbase2 0.010123734533183352
+Rule id 4: Action rule : , p1=0.2215568862275449, p2=0.20114942528735633, z-value: 0.46, p-value 0.6778124091956083674403998884372413158416748046875000000000000000000000000000000000000000000000000000, relbase1 0.04161979752530934, relbase2 0.03937007874015748
+Rule id 5: Action rule : , p1=0.22285714285714286, p2=0.19101123595505617, z-value: 0.74, p-value 0.7699354973819578784599571008584462106227874755859375000000000000000000000000000000000000000000000000, relbase1 0.043869516310461196, relbase2 0.03824521934758155
+Rule id 6: Action rule : , p1=0.23353293413173654, p2=0.16981132075471697, z-value: 0.98, p-value 0.8361135207311922723505404064781032502651214599609375000000000000000000000000000000000000000000000000, relbase1 0.043869516310461196, relbase2 0.010123734533183352
+Rule id 7: Action rule : , p1=0.12162162162162163, p2=0.09219858156028368, z-value: 0.81, p-value 0.7904412236965205895700137261883355677127838134765625000000000000000000000000000000000000000000000000, relbase1 0.020247469066366704, relbase2 0.014623172103487065
+Rule id 8: Action rule : , p1=0.17751479289940827, p2=0.1553398058252427, z-value: 0.47, p-value 0.6819771571052616332409002097847405821084976196289062500000000000000000000000000000000000000000000000, relbase1 0.03374578177727784, relbase2 0.01799775028121485
+Rule id 9: Action rule : , p1=0.4175824175824176, p2=0.23353293413173654, z-value: 3.09, p-value 0.9989891129763350807735378111829049885272979736328125000000000000000000000000000000000000000000000000, relbase1 0.04274465691788527, relbase2 0.043869516310461196
+Rule id 10: Action rule : , p1=0.20212765957446807, p2=0.09219858156028368, z-value: 2.41, p-value 0.9919604657244651679803837396320886909961700439453125000000000000000000000000000000000000000000000000, relbase1 0.021372328458942633, relbase2 0.014623172103487065
+Rule id 11: Action rule : , p1=0.35, p2=0.3111111111111111, z-value: 0.38, p-value 0.6483104635135347182384180086955893784761428833007812500000000000000000000000000000000000000000000000, relbase1 0.015748031496062992, relbase2 0.015748031496062992
+Rule id 12: Action rule : , p1=0.34, p2=0.20253164556962025, z-value: 1.74, p-value 0.9593703962468003165753316352493129670619964599609375000000000000000000000000000000000000000000000000, relbase1 0.019122609673790775, relbase2 0.01799775028121485
+Rule id 13: Action rule : , p1=0.42424242424242425, p2=0.2215568862275449, z-value: 3.50, p-value 0.9997648060536847847146191270439885556697845458984375000000000000000000000000000000000000000000000000, relbase1 0.047244094488188976, relbase2 0.04161979752530934
+Rule id 14: Action rule : , p1=0.3445378151260504, p2=0.22285714285714286, z-value: 2.30, p-value 0.9893070699328427863861179503146559000015258789062500000000000000000000000000000000000000000000000000, relbase1 0.04611923509561305, relbase2 0.043869516310461196
+Rule id 15: Action rule : , p1=0.3937007874015748, p2=0.1553398058252427, z-value: 3.97, p-value 0.9999646592321028704120067231997381895780563354492187500000000000000000000000000000000000000000000000, relbase1 0.0562429696287964, relbase2 0.01799775028121485
+Rule id 16: Action rule : , p1=0.4375, p2=0.375, z-value: 0.54, p-value 0.7066269271361583781398962855746503919363021850585937500000000000000000000000000000000000000000000000, relbase1 0.03937007874015748, relbase2 0.010123734533183352
+Rule id 17: Action rule : , p1=0.4175824175824176, p2=0.175, z-value: 4.20, p-value 0.9999864648007210643498865465517155826091766357421875000000000000000000000000000000000000000000000000, relbase1 0.04274465691788527, relbase2 0.031496062992125984
+Rule id 18: Action rule : , p1=0.20212765957446807, p2=0.12162162162162163, z-value: 1.70, p-value 0.9550671472797637173712814728787634521722793579101562500000000000000000000000000000000000000000000000, relbase1 0.021372328458942633, relbase2 0.020247469066366704
+Rule id 19: Action rule : , p1=0.7012987012987013, p2=0.5277777777777778, z-value: 1.80, p-value 0.9638480133061234633728986409550998359918594360351562500000000000000000000000000000000000000000000000, relbase1 0.06074240719910011, relbase2 0.021372328458942633
+Rule id 20: Action rule : , p1=0.5813953488372093, p2=0.3333333333333333, z-value: 2.20, p-value 0.9861165083853785651157863867410924285650253295898437500000000000000000000000000000000000000000000000, relbase1 0.0281214848143982, relbase2 0.013498312710911136
+Rule id 21: Action rule : , p1=0.4473684210526316, p2=0.20930232558139536, z-value: 2.29, p-value 0.9889989036390275378707315212523099035024642944335937500000000000000000000000000000000000000000000000, relbase1 0.019122609673790775, relbase2 0.010123734533183352
+Rule id 22: Action rule : , p1=0.34, p2=0.16071428571428573, z-value: 2.14, p-value 0.9838886689436557864141263962665107101202011108398437500000000000000000000000000000000000000000000000, relbase1 0.019122609673790775, relbase2 0.010123734533183352
+Rule id 23: Action rule : , p1=0.42424242424242425, p2=0.20114942528735633, z-value: 3.94, p-value 0.9999589343051233925052656559273600578308105468750000000000000000000000000000000000000000000000000000, relbase1 0.047244094488188976, relbase2 0.03937007874015748
+Rule id 24: Action rule : , p1=0.3445378151260504, p2=0.19101123595505617, z-value: 2.98, p-value 0.9985787224343284362859662905975710600614547729492187500000000000000000000000000000000000000000000000, relbase1 0.04611923509561305, relbase2 0.03824521934758155
+Rule id 25: Action rule : , p1=0.3937007874015748, p2=0.17751479289940827, z-value: 4.15, p-value 0.9999830250322112590311007807031273841857910156250000000000000000000000000000000000000000000000000000, relbase1 0.0562429696287964, relbase2 0.03374578177727784
+Rule id 26: Action rule : , p1=0.4175824175824176, p2=0.16981132075471697, z-value: 3.06, p-value 0.9988863796104849868129349488299340009689331054687500000000000000000000000000000000000000000000000000, relbase1 0.04274465691788527, relbase2 0.010123734533183352
+Rule id 27: Action rule : , p1=0.5813953488372093, p2=0.48936170212765956, z-value: 0.87, p-value 0.8089925738658025888838665196090005338191986083984375000000000000000000000000000000000000000000000000, relbase1 0.0281214848143982, relbase2 0.025871766029246346
+Rule id 28: Action rule : , p1=0.5945945945945946, p2=0.4772727272727273, z-value: 1.05, p-value 0.8540485631689981316227999741386156529188156127929687500000000000000000000000000000000000000000000000, relbase1 0.024746906636670417, relbase2 0.023622047244094488
+Rule id 29: Action rule : , p1=0.5454545454545454, p2=0.4666666666666667, z-value: 0.62, p-value 0.7339254268053303498220429901266470551490783691406250000000000000000000000000000000000000000000000000, relbase1 0.020247469066366704, relbase2 0.015748031496062992
+Rule id 30: Action rule : , p1=0.2882882882882883, p2=0.09219858156028368, z-value: 4.03, p-value 0.9999726892830049784777202148688957095146179199218750000000000000000000000000000000000000000000000000, relbase1 0.0359955005624297, relbase2 0.014623172103487065
+Rule id 31: Action rule : , p1=0.6111111111111112, p2=0.3111111111111111, z-value: 2.20, p-value 0.9860514969529285966842735433601774275302886962890625000000000000000000000000000000000000000000000000, relbase1 0.012373453318335208, relbase2 0.015748031496062992
+Rule id 32: Action rule : , p1=0.3684210526315789, p2=0.20253164556962025, z-value: 2.29, p-value 0.9889865194591570540794123189698439091444015502929687500000000000000000000000000000000000000000000000, relbase1 0.031496062992125984, relbase2 0.01799775028121485
+Rule id 33: Action rule : , p1=0.4945054945054945, p2=0.2215568862275449, z-value: 4.50, p-value 0.9999965847126476292672236922953743487596511840820312500000000000000000000000000000000000000000000000, relbase1 0.05061867266591676, relbase2 0.04161979752530934
+Rule id 34: Action rule : , p1=0.45918367346938777, p2=0.22285714285714286, z-value: 4.06, p-value 0.9999752954235801016835694099427200853824615478515625000000000000000000000000000000000000000000000000, relbase1 0.05061867266591676, relbase2 0.043869516310461196
+Rule id 35: Action rule : , p1=0.44680851063829785, p2=0.1553398058252427, z-value: 4.81, p-value 0.9999992290661242622107351962768007069826126098632812500000000000000000000000000000000000000000000000, relbase1 0.07086614173228346, relbase2 0.01799775028121485
+Rule id 36: Action rule : , p1=0.609375, p2=0.375, z-value: 1.97, p-value 0.9753805160807232921271747727587353438138961791992187500000000000000000000000000000000000000000000000, relbase1 0.043869516310461196, relbase2 0.010123734533183352
+Rule id 37: Action rule : , p1=0.2882882882882883, p2=0.12162162162162163, z-value: 3.36, p-value 0.9996145626922834370731152375810779631137847900390625000000000000000000000000000000000000000000000000, relbase1 0.0359955005624297, relbase2 0.020247469066366704
+Rule id 38: Action rule : , p1=0.6857142857142857, p2=0.5277777777777778, z-value: 1.60, p-value 0.9448512078868388508468001418805215507745742797851562500000000000000000000000000000000000000000000000, relbase1 0.05399325084364454, relbase2 0.021372328458942633
+Rule id 39: Action rule : , p1=0.48936170212765956, p2=0.3333333333333333, z-value: 1.43, p-value 0.9231457244786565041749781812541186809539794921875000000000000000000000000000000000000000000000000000, relbase1 0.025871766029246346, relbase2 0.013498312710911136
+Rule id 40: Action rule : , p1=0.53125, p2=0.20930232558139536, z-value: 2.90, p-value 0.9981199305479504513272104304633103311061859130859375000000000000000000000000000000000000000000000000, relbase1 0.019122609673790775, relbase2 0.010123734533183352
+Rule id 41: Action rule : , p1=0.3684210526315789, p2=0.16071428571428573, z-value: 2.63, p-value 0.9956788036068457969918199523817747831344604492187500000000000000000000000000000000000000000000000000, relbase1 0.031496062992125984, relbase2 0.010123734533183352
+Rule id 42: Action rule : , p1=0.4945054945054945, p2=0.20114942528735633, z-value: 4.94, p-value 0.9999996083725762874294673565600533038377761840820312500000000000000000000000000000000000000000000000, relbase1 0.05061867266591676, relbase2 0.03937007874015748
+Rule id 43: Action rule : , p1=0.45918367346938777, p2=0.19101123595505617, z-value: 4.72, p-value 0.9999988019315411147402983260690234601497650146484375000000000000000000000000000000000000000000000000, relbase1 0.05061867266591676, relbase2 0.03824521934758155
+Rule id 44: Action rule : , p1=0.44680851063829785, p2=0.17751479289940827, z-value: 5.15, p-value 0.9999998712426599878355659711814951151609420776367187500000000000000000000000000000000000000000000000, relbase1 0.07086614173228346, relbase2 0.03374578177727784
+Rule id 45: Action rule : , p1=0.609375, p2=0.4375, z-value: 2.05, p-value 0.9798431540275910345272336599009577184915542602539062500000000000000000000000000000000000000000000000, relbase1 0.043869516310461196, relbase2 0.03937007874015748
+Rule id 46: Action rule : , p1=0.2882882882882883, p2=0.20212765957446807, z-value: 1.42, p-value 0.9224707915109248146379172794695477932691574096679687500000000000000000000000000000000000000000000000, relbase1 0.0359955005624297, relbase2 0.021372328458942633
+Rule id 47: Action rule : , p1=0.6111111111111112, p2=0.35, z-value: 1.86, p-value 0.9683951103021984918584053048107307404279708862304687500000000000000000000000000000000000000000000000, relbase1 0.012373453318335208, relbase2 0.015748031496062992
+Rule id 48: Action rule : , p1=0.53125, p2=0.4473684210526316, z-value: 0.70, p-value 0.7578821941486777458152346298447810113430023193359375000000000000000000000000000000000000000000000000, relbase1 0.019122609673790775, relbase2 0.019122609673790775
+Rule id 49: Action rule : , p1=0.3684210526315789, p2=0.34, z-value: 0.33, p-value 0.6276887152261648727957776827679481357336044311523437500000000000000000000000000000000000000000000000, relbase1 0.031496062992125984, relbase2 0.019122609673790775
+Rule id 50: Action rule : , p1=0.4945054945054945, p2=0.42424242424242425, z-value: 0.97, p-value 0.8342507715915882249291257721779402345418930053710937500000000000000000000000000000000000000000000000, relbase1 0.05061867266591676, relbase2 0.047244094488188976
+Rule id 51: Action rule : , p1=0.5, p2=0.423728813559322, z-value: 0.82, p-value 0.7939359763451194762495788381784223020076751708984375000000000000000000000000000000000000000000000000, relbase1 0.031496062992125984, relbase2 0.0281214848143982
+Rule id 52: Action rule : , p1=0.45918367346938777, p2=0.3445378151260504, z-value: 1.72, p-value 0.9571257604789724648952642382937483489513397216796875000000000000000000000000000000000000000000000000, relbase1 0.05061867266591676, relbase2 0.04611923509561305
+Rule id 53: Action rule : , p1=0.44680851063829785, p2=0.3937007874015748, z-value: 0.88, p-value 0.8103227103609171866338556355913169682025909423828125000000000000000000000000000000000000000000000000, relbase1 0.07086614173228346, relbase2 0.0562429696287964
+Rule id 54: Action rule : , p1=0.3253012048192771, p2=0.09219858156028368, z-value: 4.40, p-value 0.9999945692817688858156088826945051550865173339843750000000000000000000000000000000000000000000000000, relbase1 0.030371203599550055, relbase2 0.014623172103487065
+Rule id 55: Action rule : , p1=0.9230769230769231, p2=0.6842105263157895, z-value: 3.49, p-value 0.9997582269836291501974301354493945837020874023437500000000000000000000000000000000000000000000000000, relbase1 0.09448818897637795, relbase2 0.02924634420697413
+Rule id 56: Action rule : , p1=0.6285714285714286, p2=0.3111111111111111, z-value: 2.83, p-value 0.9976825702869395184890777272812556475400924682617187500000000000000000000000000000000000000000000000, relbase1 0.024746906636670417, relbase2 0.015748031496062992
+Rule id 57: Action rule : , p1=0.6056338028169014, p2=0.20253164556962025, z-value: 5.05, p-value 0.9999997745528346193566449073841795325279235839843750000000000000000000000000000000000000000000000000, relbase1 0.048368953880764905, relbase2 0.01799775028121485
+Rule id 58: Action rule : , p1=0.6533333333333333, p2=0.2215568862275449, z-value: 6.49, p-value 0.9999999999570787778679914481472223997116088867187500000000000000000000000000000000000000000000000000, relbase1 0.05511811023622047, relbase2 0.04161979752530934
+Rule id 59: Action rule : , p1=0.6792452830188679, p2=0.22285714285714286, z-value: 7.59, p-value 0.9999999999999834576769330851675476878881454467773437500000000000000000000000000000000000000000000000, relbase1 0.08098987626546682, relbase2 0.043869516310461196
+Rule id 60: Action rule : , p1=0.5576923076923077, p2=0.1553398058252427, z-value: 6.04, p-value 0.9999999992260039105573810047644656151533126831054687500000000000000000000000000000000000000000000000, relbase1 0.06524184476940383, relbase2 0.01799775028121485
+Rule id 61: Action rule : , p1=0.3253012048192771, p2=0.12162162162162163, z-value: 3.75, p-value 0.9999116721690339826267290845862589776515960693359375000000000000000000000000000000000000000000000000, relbase1 0.030371203599550055, relbase2 0.020247469066366704
+Rule id 62: Action rule : , p1=0.9230769230769231, p2=0.5277777777777778, z-value: 5.13, p-value 0.9999998538334344821976173989241942763328552246093750000000000000000000000000000000000000000000000000, relbase1 0.09448818897637795, relbase2 0.021372328458942633
+Rule id 63: Action rule : , p1=0.6, p2=0.3333333333333333, z-value: 2.06, p-value 0.9804062790691949746957334355101920664310455322265625000000000000000000000000000000000000000000000000, relbase1 0.01687289088863892, relbase2 0.013498312710911136
+Rule id 64: Action rule : , p1=0.7894736842105263, p2=0.20930232558139536, z-value: 5.22, p-value 0.9999999081720782889703968976391479372978210449218750000000000000000000000000000000000000000000000000, relbase1 0.03374578177727784, relbase2 0.010123734533183352
+Rule id 65: Action rule : , p1=0.6056338028169014, p2=0.16071428571428573, z-value: 5.06, p-value 0.9999997932189255145374318090034648776054382324218750000000000000000000000000000000000000000000000000, relbase1 0.048368953880764905, relbase2 0.010123734533183352
+Rule id 66: Action rule : , p1=0.6533333333333333, p2=0.20114942528735633, z-value: 6.92, p-value 0.9999999999978000930767052523151505738496780395507812500000000000000000000000000000000000000000000000, relbase1 0.05511811023622047, relbase2 0.03937007874015748
+Rule id 67: Action rule : , p1=0.6792452830188679, p2=0.19101123595505617, z-value: 8.23, p-value 0.9999999999999998889776975374843459576368331909179687500000000000000000000000000000000000000000000000, relbase1 0.08098987626546682, relbase2 0.03824521934758155
+Rule id 68: Action rule : , p1=0.5576923076923077, p2=0.17751479289940827, z-value: 6.53, p-value 0.9999999999664060945647747757902834564447402954101562500000000000000000000000000000000000000000000000, relbase1 0.06524184476940383, relbase2 0.03374578177727784
+Rule id 69: Action rule : , p1=0.3253012048192771, p2=0.20212765957446807, z-value: 1.86, p-value 0.9688833024796913440113144133647438138723373413085937500000000000000000000000000000000000000000000000, relbase1 0.030371203599550055, relbase2 0.021372328458942633
+Rule id 70: Action rule : , p1=0.9230769230769231, p2=0.7012987012987013, z-value: 3.74, p-value 0.9999078883944926277038689477194566279649734497070312500000000000000000000000000000000000000000000000, relbase1 0.09448818897637795, relbase2 0.06074240719910011
+Rule id 71: Action rule : , p1=0.6285714285714286, p2=0.35, z-value: 2.41, p-value 0.9920031719389499347272476370562799274921417236328125000000000000000000000000000000000000000000000000, relbase1 0.024746906636670417, relbase2 0.015748031496062992
+Rule id 72: Action rule : , p1=0.7894736842105263, p2=0.4473684210526316, z-value: 3.07, p-value 0.9989287899393204384068667422980070114135742187500000000000000000000000000000000000000000000000000000, relbase1 0.03374578177727784, relbase2 0.019122609673790775
+Rule id 73: Action rule : , p1=0.6056338028169014, p2=0.34, z-value: 2.88, p-value 0.9979972447688395531528726678516250103712081909179687500000000000000000000000000000000000000000000000, relbase1 0.048368953880764905, relbase2 0.019122609673790775
+Rule id 74: Action rule : , p1=0.6533333333333333, p2=0.42424242424242425, z-value: 3.00, p-value 0.9986331697818554564705095799581613391637802124023437500000000000000000000000000000000000000000000000, relbase1 0.05511811023622047, relbase2 0.047244094488188976
+Rule id 75: Action rule : , p1=0.7368421052631579, p2=0.423728813559322, z-value: 3.68, p-value 0.9998849776715768022938846115721389651298522949218750000000000000000000000000000000000000000000000000, relbase1 0.06299212598425197, relbase2 0.0281214848143982
+Rule id 76: Action rule : , p1=0.6792452830188679, p2=0.3445378151260504, z-value: 5.01, p-value 0.9999997310479336043442799564218148589134216308593750000000000000000000000000000000000000000000000000, relbase1 0.08098987626546682, relbase2 0.04611923509561305
+Rule id 77: Action rule : , p1=0.6896551724137931, p2=0.5945945945945946, z-value: 0.80, p-value 0.7872125057165297867811659671133384108543395996093750000000000000000000000000000000000000000000000000, relbase1 0.02249718785151856, relbase2 0.024746906636670417
+Rule id 78: Action rule : , p1=0.7647058823529411, p2=0.5454545454545454, z-value: 2.24, p-value 0.9874773737509455751037990012264344841241836547851562500000000000000000000000000000000000000000000000, relbase1 0.05849268841394826, relbase2 0.020247469066366704
+Rule id 79: Action rule : , p1=0.5576923076923077, p2=0.3937007874015748, z-value: 2.49, p-value 0.9935281616968940632261819700943306088447570800781250000000000000000000000000000000000000000000000000, relbase1 0.06524184476940383, relbase2 0.0562429696287964
+Rule id 80: Action rule : , p1=0.7083333333333334, p2=0.5, z-value: 2.90, p-value 0.9981140435869197968798971487558446824550628662109375000000000000000000000000000000000000000000000000, relbase1 0.11473565804274466, relbase2 0.0359955005624297
+Rule id 81: Action rule : , p1=0.3253012048192771, p2=0.2882882882882883, z-value: 0.55, p-value 0.7103642935658599499859633397136349231004714965820312500000000000000000000000000000000000000000000000, relbase1 0.030371203599550055, relbase2 0.0359955005624297
+Rule id 82: Action rule : , p1=0.9230769230769231, p2=0.6857142857142857, z-value: 3.89, p-value 0.9999488690043171201793370528321247547864913940429687500000000000000000000000000000000000000000000000, relbase1 0.09448818897637795, relbase2 0.05399325084364454
+Rule id 83: Action rule : , p1=0.6, p2=0.48936170212765956, z-value: 0.90, p-value 0.8146815762528452076196572306798771023750305175781250000000000000000000000000000000000000000000000000, relbase1 0.01687289088863892, relbase2 0.025871766029246346
+Rule id 84: Action rule : , p1=0.7894736842105263, p2=0.53125, z-value: 2.29, p-value 0.9890295693676853794329417723929509520530700683593750000000000000000000000000000000000000000000000000, relbase1 0.03374578177727784, relbase2 0.019122609673790775
+Rule id 85: Action rule : , p1=0.6056338028169014, p2=0.3684210526315789, z-value: 2.88, p-value 0.9979865815597593892150030114862602204084396362304687500000000000000000000000000000000000000000000000, relbase1 0.048368953880764905, relbase2 0.031496062992125984
+Rule id 86: Action rule : , p1=0.6533333333333333, p2=0.4945054945054945, z-value: 2.05, p-value 0.9800582117307393703597995227028150111436843872070312500000000000000000000000000000000000000000000000, relbase1 0.05511811023622047, relbase2 0.05061867266591676
+Rule id 87: Action rule : , p1=0.7368421052631579, p2=0.5, z-value: 2.80, p-value 0.9974104140925934558481458225287497043609619140625000000000000000000000000000000000000000000000000000, relbase1 0.06299212598425197, relbase2 0.031496062992125984
+Rule id 88: Action rule : , p1=0.6792452830188679, p2=0.45918367346938777, z-value: 3.18, p-value 0.9992513656960695378472792071988806128501892089843750000000000000000000000000000000000000000000000000, relbase1 0.08098987626546682, relbase2 0.05061867266591676
+Rule id 89: Action rule : , p1=0.6896551724137931, p2=0.4772727272727273, z-value: 1.79, p-value 0.9632350783241742098184090536960866302251815795898437500000000000000000000000000000000000000000000000, relbase1 0.02249718785151856, relbase2 0.023622047244094488
+Rule id 90: Action rule : , p1=0.5135135135135135, p2=0.41379310344827586, z-value: 0.81, p-value 0.7897747697973627190037859691074118018150329589843750000000000000000000000000000000000000000000000000, relbase1 0.021372328458942633, relbase2 0.013498312710911136
+Rule id 91: Action rule : , p1=0.7647058823529411, p2=0.4666666666666667, z-value: 2.90, p-value 0.9981324601447243427543298821547068655490875244140625000000000000000000000000000000000000000000000000, relbase1 0.05849268841394826, relbase2 0.015748031496062992
+Rule id 92: Action rule : , p1=0.5576923076923077, p2=0.44680851063829785, z-value: 1.72, p-value 0.9569032647074763309191780535911675542593002319335937500000000000000000000000000000000000000000000000, relbase1 0.06524184476940383, relbase2 0.07086614173228346
+Total rules:92, out of them action rules:92, for relative base criteria filtered out 0, resulting rules 92
+[{'id': 67, 'rule_id': 67, 'z_score': 8.227866409847424}, {'id': 59, 'rule_id': 59, 'z_score': 7.585313189205483}, {'id': 66, 'rule_id': 66, 'z_score': 6.923702795258776}, {'id': 68, 'rule_id': 68, 'z_score': 6.526804023537918}, {'id': 58, 'rule_id': 58, 'z_score': 6.489989196476503}, {'id': 60, 'rule_id': 60, 'z_score': 6.0392843832434835}, {'id': 64, 'rule_id': 64, 'z_score': 5.215162821214579}, {'id': 44, 'rule_id': 44, 'z_score': 5.152151634301284}, {'id': 62, 'rule_id': 62, 'z_score': 5.128323925320961}, {'id': 65, 'rule_id': 65, 'z_score': 5.062606845237174}, {'id': 57, 'rule_id': 57, 'z_score': 5.0461106556627024}, {'id': 76, 'rule_id': 76, 'z_score': 5.012274433865113}, {'id': 42, 'rule_id': 42, 'z_score': 4.939494171377956}, {'id': 35, 'rule_id': 35, 'z_score': 4.805731416339994}, {'id': 43, 'rule_id': 43, 'z_score': 4.71677392251709}, {'id': 33, 'rule_id': 33, 'z_score': 4.498900714163563}, {'id': 54, 'rule_id': 54, 'z_score': 4.399272515825147}, {'id': 17, 'rule_id': 17, 'z_score': 4.1968073726574735}, {'id': 25, 'rule_id': 25, 'z_score': 4.145212071604975}, {'id': 34, 'rule_id': 34, 'z_score': 4.058404398098272}, {'id': 30, 'rule_id': 30, 'z_score': 4.034917724325758}, {'id': 15, 'rule_id': 15, 'z_score': 3.9739798823923103}, {'id': 23, 'rule_id': 23, 'z_score': 3.938094090670085}, {'id': 82, 'rule_id': 82, 'z_score': 3.885161249659691}, {'id': 61, 'rule_id': 61, 'z_score': 3.7502538227771836}, {'id': 70, 'rule_id': 70, 'z_score': 3.7397229196776465}, {'id': 75, 'rule_id': 75, 'z_score': 3.6835095548266947}, {'id': 13, 'rule_id': 13, 'z_score': 3.4970759490569567}, {'id': 55, 'rule_id': 55, 'z_score': 3.489709413361826}, {'id': 37, 'rule_id': 37, 'z_score': 3.363046200220358}, {'id': 88, 'rule_id': 88, 'z_score': 3.175212401316035}, {'id': 9, 'rule_id': 9, 'z_score': 3.087014984693044}, {'id': 72, 'rule_id': 72, 'z_score': 3.0697444336210817}, {'id': 26, 'rule_id': 26, 'z_score': 3.058128458591953}, {'id': 74, 'rule_id': 74, 'z_score': 2.9962011502707857}, {'id': 24, 'rule_id': 24, 'z_score': 2.984270327795246}, {'id': 91, 'rule_id': 91, 'z_score': 2.8997100680769297}, {'id': 40, 'rule_id': 40, 'z_score': 2.8976133039366747}, {'id': 80, 'rule_id': 80, 'z_score': 2.896632533179015}, {'id': 73, 'rule_id': 73, 'z_score': 2.87772744482018}, {'id': 85, 'rule_id': 85, 'z_score': 2.876051748668855}, {'id': 56, 'rule_id': 56, 'z_score': 2.8313732857645864}, {'id': 87, 'rule_id': 87, 'z_score': 2.7956733488882795}, {'id': 41, 'rule_id': 41, 'z_score': 2.6258853261792057}, {'id': 79, 'rule_id': 79, 'z_score': 2.485315215464396}, {'id': 71, 'rule_id': 71, 'z_score': 2.4090602791485787}, {'id': 10, 'rule_id': 10, 'z_score': 2.4071158450097925}, {'id': 14, 'rule_id': 14, 'z_score': 2.3011021094438333}, {'id': 84, 'rule_id': 84, 'z_score': 2.2913901066105846}, {'id': 21, 'rule_id': 21, 'z_score': 2.2903300220562746}, {'id': 32, 'rule_id': 32, 'z_score': 2.2899026415428043}, {'id': 78, 'rule_id': 78, 'z_score': 2.240704036121419}, {'id': 20, 'rule_id': 20, 'z_score': 2.2005628890180673}, {'id': 31, 'rule_id': 31, 'z_score': 2.19873169182408}, {'id': 22, 'rule_id': 22, 'z_score': 2.1416375192212764}, {'id': 63, 'rule_id': 63, 'z_score': 2.062213207102224}, {'id': 86, 'rule_id': 86, 'z_score': 2.054952668880991}, {'id': 45, 'rule_id': 45, 'z_score': 2.0505202278039603}, {'id': 36, 'rule_id': 36, 'z_score': 1.966516590319034}, {'id': 69, 'rule_id': 69, 'z_score': 1.8646292138462335}, {'id': 47, 'rule_id': 47, 'z_score': 1.8577130141918168}, {'id': 19, 'rule_id': 19, 'z_score': 1.7971993772020198}, {'id': 89, 'rule_id': 89, 'z_score': 1.7895278690410137}, {'id': 12, 'rule_id': 12, 'z_score': 1.7434261287141148}, {'id': 52, 'rule_id': 52, 'z_score': 1.7182639646769378}, {'id': 92, 'rule_id': 92, 'z_score': 1.7158283124138654}, {'id': 18, 'rule_id': 18, 'z_score': 1.696106539433776}, {'id': 38, 'rule_id': 38, 'z_score': 1.5968570111727032}, {'id': 39, 'rule_id': 39, 'z_score': 1.4265537930332057}, {'id': 46, 'rule_id': 46, 'z_score': 1.4218892067684499}, {'id': 2, 'rule_id': 2, 'z_score': 1.3777846079620462}, {'id': 1, 'rule_id': 1, 'z_score': 1.310896255162194}, {'id': 28, 'rule_id': 28, 'z_score': 1.0539564119644884}, {'id': 6, 'rule_id': 6, 'z_score': 0.9786095100381887}, {'id': 50, 'rule_id': 50, 'z_score': 0.9711000542246895}, {'id': 83, 'rule_id': 83, 'z_score': 0.8952810877439911}, {'id': 53, 'rule_id': 53, 'z_score': 0.8790861267612974}, {'id': 27, 'rule_id': 27, 'z_score': 0.8741898874298735}, {'id': 51, 'rule_id': 51, 'z_score': 0.820154481063869}, {'id': 7, 'rule_id': 7, 'z_score': 0.8079531501973058}, {'id': 90, 'rule_id': 90, 'z_score': 0.8056399899697386}, {'id': 77, 'rule_id': 77, 'z_score': 0.7967865830991322}, {'id': 5, 'rule_id': 5, 'z_score': 0.7386344402796134}, {'id': 48, 'rule_id': 48, 'z_score': 0.6995064049215817}, {'id': 29, 'rule_id': 29, 'z_score': 0.6247286801113466}, {'id': 3, 'rule_id': 3, 'z_score': 0.6162610315846774}, {'id': 81, 'rule_id': 81, 'z_score': 0.5544492729344189}, {'id': 16, 'rule_id': 16, 'z_score': 0.5435573065046091}, {'id': 8, 'rule_id': 8, 'z_score': 0.473234781494147}, {'id': 4, 'rule_id': 4, 'z_score': 0.4615902586363199}, {'id': 11, 'rule_id': 11, 'z_score': 0.380763058637011}, {'id': 49, 'rule_id': 49, 'z_score': 0.3257380284183816}]
+RULE 1: z-score 8.23, rule text:   Parch(0) => Survived(1) | --- : Fare((39.688, 512.329]) x Fare((7.854, 10.5])
+RULE 2: z-score 7.59, rule text:   Parch(0) => Survived(1) | --- : Fare((39.688, 512.329]) x Fare((-0.001, 7.854])
+RULE 3: z-score 6.92, rule text:   SibSp(0) => Survived(1) | --- : Fare((39.688, 512.329]) x Fare((7.854, 10.5])
+RULE 4: z-score 6.53, rule text:   Embarked(3) => Survived(1) | --- : Fare((39.688, 512.329]) x Fare((7.854, 10.5])
+RULE 5: z-score 6.49, rule text:   SibSp(0) => Survived(1) | --- : Fare((39.688, 512.329]) x Fare((-0.001, 7.854])
+RULE 6: z-score 6.04, rule text:   Embarked(3) => Survived(1) | --- : Fare((39.688, 512.329]) x Fare((-0.001, 7.854])
+RULE 7: z-score 5.22, rule text:   Age((28.0, 38.0]) => Survived(1) | --- : Fare((39.688, 512.329]) x Fare((7.854, 10.5])
+RULE 8: z-score 5.15, rule text:   Embarked(3) => Survived(1) | --- : Fare((21.075, 39.688]) x Fare((7.854, 10.5])
+RULE 9: z-score 5.13, rule text:   Sex(female) => Survived(1) | --- : Fare((39.688, 512.329]) x Fare((7.854, 10.5])
+RULE 10: z-score 5.06, rule text:   Age((38.0, 60.0]) => Survived(1) | --- : Fare((39.688, 512.329]) x Fare((7.854, 10.5])
+RULE 11: z-score 5.05, rule text:   Age((38.0, 60.0]) => Survived(1) | --- : Fare((39.688, 512.329]) x Fare((-0.001, 7.854])
+RULE 12: z-score 5.01, rule text:   Parch(0) => Survived(1) | --- : Fare((39.688, 512.329]) x Fare((10.5, 21.075])
+RULE 13: z-score 4.94, rule text:   SibSp(0) => Survived(1) | --- : Fare((21.075, 39.688]) x Fare((7.854, 10.5])
+RULE 14: z-score 4.81, rule text:   Embarked(3) => Survived(1) | --- : Fare((21.075, 39.688]) x Fare((-0.001, 7.854])
+RULE 15: z-score 4.72, rule text:   Parch(0) => Survived(1) | --- : Fare((21.075, 39.688]) x Fare((7.854, 10.5])
+RULE 16: z-score 4.50, rule text:   SibSp(0) => Survived(1) | --- : Fare((21.075, 39.688]) x Fare((-0.001, 7.854])
+RULE 17: z-score 4.40, rule text:   Sex(Male) => Survived(1) | --- : Fare((39.688, 512.329]) x Fare((-0.001, 7.854])
+RULE 18: z-score 4.20, rule text:   Pclass(3) => Survived(1) | --- : Fare((10.5, 21.075]) x Fare((7.854, 10.5])
+RULE 19: z-score 4.15, rule text:   Embarked(3) => Survived(1) | --- : Fare((10.5, 21.075]) x Fare((7.854, 10.5])
+RULE 20: z-score 4.06, rule text:   Parch(0) => Survived(1) | --- : Fare((21.075, 39.688]) x Fare((-0.001, 7.854])
+RULE 21: z-score 4.03, rule text:   Sex(Male) => Survived(1) | --- : Fare((21.075, 39.688]) x Fare((-0.001, 7.854])
+RULE 22: z-score 3.97, rule text:   Embarked(3) => Survived(1) | --- : Fare((10.5, 21.075]) x Fare((-0.001, 7.854])
+RULE 23: z-score 3.94, rule text:   SibSp(0) => Survived(1) | --- : Fare((10.5, 21.075]) x Fare((7.854, 10.5])
+RULE 24: z-score 3.89, rule text:   Sex(female) => Survived(1) | --- : Fare((39.688, 512.329]) x Fare((21.075, 39.688])
+RULE 25: z-score 3.75, rule text:   Sex(Male) => Survived(1) | --- : Fare((39.688, 512.329]) x Fare((7.854, 10.5])
+RULE 26: z-score 3.74, rule text:   Sex(female) => Survived(1) | --- : Fare((39.688, 512.329]) x Fare((10.5, 21.075])
+RULE 27: z-score 3.68, rule text:   SibSp(1) => Survived(1) | --- : Fare((39.688, 512.329]) x Fare((10.5, 21.075])
+RULE 28: z-score 3.50, rule text:   SibSp(0) => Survived(1) | --- : Fare((10.5, 21.075]) x Fare((-0.001, 7.854])
+RULE 29: z-score 3.49, rule text:   Sex(female) => Survived(1) | --- : Fare((39.688, 512.329]) x Fare((-0.001, 7.854])
+RULE 30: z-score 3.36, rule text:   Sex(Male) => Survived(1) | --- : Fare((21.075, 39.688]) x Fare((7.854, 10.5])
+SUMMARY OF ITERATIONS
+Item 0: dataset name: adults.zip                    , rules total:     37, action rules:     37
+Item 1: dataset name: diabetes.zip                  , rules total:     41, action rules:     41
+Item 2: dataset name: marketing_campaign.zip        , rules total:    111, action rules:    111
+Item 3: dataset name: svmtrain.zip                  , rules total:     92, action rules:     92

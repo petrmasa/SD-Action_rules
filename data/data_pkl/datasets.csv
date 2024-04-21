@@ -1,0 +1,6 @@
+filename;target;target_class;split_var;ignore_vars
+adults.zip;Target;>50K;Hours_per_week_b;
+diabetes.zip;Outcome;1;BMI
+marketing_campaign.zip;Response;1;Recency;ID|Dt_Customer
+svmtrain.zip;Survived;1;Fare
+
