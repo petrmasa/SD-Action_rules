@@ -6,3 +6,4 @@ This folder contains scripts for replication steps in the article
 - **result_sd_act_basic_flow.txt** - result of the run of the previous code
 - **sd_act_multiple_datasets.py** - testing of SD-Action rules on multiple datasets
 - **result_sd_act_multiple_datasets.txt** - result of the run of the previous code
+

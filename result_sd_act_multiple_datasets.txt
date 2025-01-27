@@ -1,3 +1,4 @@
+
 Automatically reordering numeric categories ...done
 Cleverminer version  1.0.11
                  filename    target  ... rules_total rules_act
@@ -339,9 +340,9 @@ Cleverminer version 1.0.11.
 Warning: Python 3.10+ NOT detected. You should upgrade to Python 3.10 or greater to get better performance
 Starting data preparation ...
 Automatically reordering numeric categories ...
-WARNING: attribute ID has more than 100 values, will be ignored.
+WARNING: attribute ID has more than 100 values, will be ignored.
  If you haven't set maximum number of categories and you really need more categories and you know what you are doing, please use max_categories option to increase allowed number of categories.
-WARNING: attribute Dt_Customer has more than 100 values, will be ignored.
+WARNING: attribute Dt_Customer has more than 100 values, will be ignored.
  If you haven't set maximum number of categories and you really need more categories and you know what you are doing, please use max_categories option to increase allowed number of categories.
 Encoding columns into bit-form...
 Encoding columns into bit-form...done
