@@ -35,13 +35,9 @@ edu_cat = ["Preschool","1st-4th", "5th-6th", "7th-8th","9th","10th","11th","12th
 edu_cat_type =CategoricalDtype(categories=edu_cat, ordered=True)
 
 
-# Comment this two lines of code and uncomment following 2 if you have downloaded files locally
 train_url = 'https://archive.ics.uci.edu/ml/machine-learning-databases/adult/adult.data'
 test_url = 'https://archive.ics.uci.edu/ml/machine-learning-databases/adult/adult.test'
 
-
-#train_url = 'w:\\development\\cleverminer\\_data\\adult.data'
-#test_url = 'w:\\development\\cleverminer\\_data\\adult.test'
 
 
 
@@ -71,7 +67,7 @@ original['Income']=original['Target']
 df = original[['Income','Capital_Gain_b','Capital_Loss_b','Hours_per_week_b','Occupation','Martial_Status','Relationship','Age_b','Education','Sex','Country','Race','Workclass','Target']]
 
 
-
+df = df.reset_index(drop=True)
 fname = os.path.join(dir,'adults.zip')
 df.to_pickle(fname,compression='zip')
 print(f"Your file is in {fname}")
